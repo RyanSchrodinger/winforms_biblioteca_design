@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Livro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Livro.Designer.cs">
+      <DependentUpon>Livro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Livro.resx">
+      <DependentUpon>Livro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,7 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
+    <None Include="Resources\mulher.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\biblioteca.png" />
@@ -113,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\carteira-de-identidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mulher 64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
