@@ -35,21 +35,34 @@
             this.tpUsuarios = new System.Windows.Forms.TabPage();
             this.tpLivros = new System.Windows.Forms.TabPage();
             this.tpFuncionarios = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnLivros = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tcControle.SuspendLayout();
-            this.tpFuncionarios.SuspendLayout();
+            this.tpPrincipal.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
+            this.panel2.Controls.Add(this.btnUsuarios);
+            this.panel2.Controls.Add(this.btnFuncionarios);
+            this.panel2.Controls.Add(this.btnLivros);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 618);
+            this.panel2.Size = new System.Drawing.Size(262, 618);
             this.panel2.TabIndex = 0;
             // 
             // panel1
@@ -74,20 +87,21 @@
             this.tcControle.Controls.Add(this.tpFuncionarios);
             this.tcControle.Depth = 0;
             this.tcControle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcControle.Location = new System.Drawing.Point(217, 0);
+            this.tcControle.Location = new System.Drawing.Point(262, 0);
             this.tcControle.MouseState = MaterialSkin.MouseState.HOVER;
             this.tcControle.Name = "tcControle";
             this.tcControle.SelectedIndex = 0;
-            this.tcControle.Size = new System.Drawing.Size(1112, 618);
+            this.tcControle.Size = new System.Drawing.Size(1067, 618);
             this.tcControle.TabIndex = 1;
             // 
             // tpPrincipal
             // 
             this.tpPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.tpPrincipal.Controls.Add(this.pictureBox1);
             this.tpPrincipal.Location = new System.Drawing.Point(4, 25);
             this.tpPrincipal.Name = "tpPrincipal";
             this.tpPrincipal.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPrincipal.Size = new System.Drawing.Size(1104, 589);
+            this.tpPrincipal.Size = new System.Drawing.Size(1059, 589);
             this.tpPrincipal.TabIndex = 0;
             this.tpPrincipal.Text = "Tela Principal";
             // 
@@ -96,7 +110,7 @@
             this.tpUsuarios.Location = new System.Drawing.Point(4, 25);
             this.tpUsuarios.Name = "tpUsuarios";
             this.tpUsuarios.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUsuarios.Size = new System.Drawing.Size(1104, 589);
+            this.tpUsuarios.Size = new System.Drawing.Size(1059, 589);
             this.tpUsuarios.TabIndex = 1;
             this.tpUsuarios.Text = "Usuarios";
             this.tpUsuarios.UseVisualStyleBackColor = true;
@@ -106,7 +120,7 @@
             this.tpLivros.Location = new System.Drawing.Point(4, 25);
             this.tpLivros.Name = "tpLivros";
             this.tpLivros.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLivros.Size = new System.Drawing.Size(1104, 589);
+            this.tpLivros.Size = new System.Drawing.Size(1059, 589);
             this.tpLivros.TabIndex = 2;
             this.tpLivros.Text = "Livros";
             this.tpLivros.UseVisualStyleBackColor = true;
@@ -114,36 +128,138 @@
             // tpFuncionarios
             // 
             this.tpFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.tpFuncionarios.Controls.Add(this.pictureBox1);
             this.tpFuncionarios.Location = new System.Drawing.Point(4, 25);
             this.tpFuncionarios.Name = "tpFuncionarios";
             this.tpFuncionarios.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFuncionarios.Size = new System.Drawing.Size(1104, 589);
+            this.tpFuncionarios.Size = new System.Drawing.Size(1059, 589);
             this.tpFuncionarios.TabIndex = 3;
             this.tpFuncionarios.Text = "Funcionarios";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(262, 99);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(94, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Biblioteca";
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::winforms_biblioteca_design.Properties.Resources.biblioteca;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 161);
+            this.pictureBox1.Location = new System.Drawing.Point(385, 142);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(282, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnFuncionarios
+            // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
+            this.btnFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFuncionarios.FlatAppearance.BorderSize = 0;
+            this.btnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
+            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(185)))), ((int)(((byte)(178)))));
+            this.btnFuncionarios.Image = global::winforms_biblioteca_design.Properties.Resources.carteira_de_identidade;
+            this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.Location = new System.Drawing.Point(0, 152);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFuncionarios.Size = new System.Drawing.Size(262, 53);
+            this.btnFuncionarios.TabIndex = 3;
+            this.btnFuncionarios.Text = "        Funcionários";
+            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(185)))), ((int)(((byte)(178)))));
+            this.btnUsuarios.Image = global::winforms_biblioteca_design.Properties.Resources.adicionar_usuario;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 205);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(262, 53);
+            this.btnUsuarios.TabIndex = 2;
+            this.btnUsuarios.Text = "        Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            // 
+            // btnLivros
+            // 
+            this.btnLivros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
+            this.btnLivros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLivros.FlatAppearance.BorderSize = 0;
+            this.btnLivros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
+            this.btnLivros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLivros.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLivros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(185)))), ((int)(((byte)(178)))));
+            this.btnLivros.Image = global::winforms_biblioteca_design.Properties.Resources.abra_o_livro__3_;
+            this.btnLivros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLivros.Location = new System.Drawing.Point(0, 99);
+            this.btnLivros.Name = "btnLivros";
+            this.btnLivros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLivros.Size = new System.Drawing.Size(262, 53);
+            this.btnLivros.TabIndex = 1;
+            this.btnLivros.Text = "        Livros";
+            this.btnLivros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLivros.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::winforms_biblioteca_design.Properties.Resources.abra_o_livro;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1361, 647);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tcControle.ResumeLayout(false);
-            this.tpFuncionarios.ResumeLayout(false);
+            this.tpPrincipal.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,6 +274,12 @@
         private System.Windows.Forms.TabPage tpLivros;
         private System.Windows.Forms.TabPage tpFuncionarios;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLivros;
+        private System.Windows.Forms.Button btnFuncionarios;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
 

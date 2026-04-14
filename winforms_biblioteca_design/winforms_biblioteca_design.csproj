@@ -90,5 +90,29 @@
   <ItemGroup>
     <None Include="Resources\biblioteca.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biblioteca-on-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biblioteca-on-line %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abra-o-livro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abra-o-livro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abra-o-livro %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abra-o-livro %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carteira-de-identidade.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
