@@ -72,6 +72,7 @@ namespace winforms_biblioteca_design.Controls
             AtivarArredondamentoControle(btnExcluir, 10);
             AtivarArredondamentoControle(btnAtualizar, 10);
             AtivarArredondamentoControle(btnSalvar, 10);
+            AtivarArredondamentoControle(panelLivro, 15);
 
             // Se quiser textbox arredondado:
             // AtivarArredondamentoControle(txtTitulo, 10);
@@ -116,6 +117,24 @@ namespace winforms_biblioteca_design.Controls
             txtQuantidade.Text = livro.QuantidadeDisponivel.ToString();
             txtAnoPublicacao.Text = livro.DataCadastro.ToString("dd/MM/yyyy");
 
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            TextBox pesquisa = sender as TextBox;
+            if (pesquisa.Text == "")
+            {
+                AtualizarLista();
+                return;
+            }
+            lboLivros.ClearSelected();
+            lboLivros.Items.Clear();
+            string textoDigitado = txtPesquisar.Text;
+            LivrosTableAdapter dados = new LivrosTableAdapter();
+            var livros = from linha in dados.GetData()
+                         where linha.Titulo.ToLower().Contains(textoDigitado.ToLower())
+                         select linha;
+            foreach (var livro in livros) lboLivros.Items.Add(livro);
         }
     }
 }

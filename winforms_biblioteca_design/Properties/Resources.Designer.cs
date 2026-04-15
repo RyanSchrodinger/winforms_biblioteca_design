@@ -153,6 +153,16 @@ namespace winforms_biblioteca_design.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap livro {
+            get {
+                object obj = ResourceManager.GetObject("livro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap livro_de_enderecos {
             get {
                 object obj = ResourceManager.GetObject("livro-de-enderecos", resourceCulture);

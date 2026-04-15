@@ -178,7 +178,7 @@
             // 
             // tpPrincipal
             // 
-            this.tpPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.tpPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(217)))), ((int)(((byte)(209)))));
             this.tpPrincipal.Controls.Add(this.pictureBox1);
             this.tpPrincipal.Location = new System.Drawing.Point(4, 25);
             this.tpPrincipal.Name = "tpPrincipal";
