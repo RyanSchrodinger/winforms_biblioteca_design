@@ -126,5 +126,11 @@
   <ItemGroup>
     <None Include="Resources\mulher 64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livro-de-enderecos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vertical-bar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

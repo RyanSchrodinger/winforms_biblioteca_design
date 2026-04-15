@@ -153,6 +153,26 @@ namespace winforms_biblioteca_design.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap livro_de_enderecos {
+            get {
+                object obj = ResourceManager.GetObject("livro-de-enderecos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa__1_ {
+            get {
+                object obj = ResourceManager.GetObject("lupa (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mulher {
             get {
                 object obj = ResourceManager.GetObject("mulher", resourceCulture);
@@ -166,6 +186,16 @@ namespace winforms_biblioteca_design.Properties {
         internal static System.Drawing.Bitmap mulher_64 {
             get {
                 object obj = ResourceManager.GetObject("mulher 64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vertical_bar {
+            get {
+                object obj = ResourceManager.GetObject("vertical-bar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
