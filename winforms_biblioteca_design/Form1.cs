@@ -19,33 +19,34 @@ namespace winforms_biblioteca_design
 
         {
             InitializeComponent();
-            ArredondarCadaBotao();
+            ArredondarCadaElemento();
 
 
         }
         #region METODOS
 
-        public void ArredondarBotao(Button btn, int raio)
+        public void ArredondarBotao(Control cntr, int raio)
         {
             GraphicsPath path = new GraphicsPath();
 
             path.StartFigure();
 
             path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+            path.AddArc(cntr.Width - raio, 0, raio, raio, 270, 90);
+            path.AddArc(cntr.Width - raio, cntr.Height - raio, raio, raio, 0, 90);
+            path.AddArc(0, cntr.Height - raio, raio, raio, 90, 90);
 
             path.CloseFigure();
 
-            btn.Region = new Region(path);
+            cntr.Region = new Region(path);
         }
 
-        public void ArredondarCadaBotao()
+        public void ArredondarCadaElemento()
         {
             ArredondarBotao(btnLivros, 10);
             ArredondarBotao(btnUsuarios, 10);
             ArredondarBotao(btnFuncionarios, 10);
+            ArredondarBotao(panelPerfil, 20);
         }
 
 
