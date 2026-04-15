@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panelPesquisar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelCadastrar = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lboLivros = new System.Windows.Forms.ListBox();
             this.panelListBox = new System.Windows.Forms.Panel();
+            this.lboLivros = new System.Windows.Forms.ListBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panelPesquisar = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.panelCadastrar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtGenero = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -61,18 +58,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtAnoPublicacao = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelPesquisar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelCadastrar.SuspendLayout();
+            this.panelListBox.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelListBox.SuspendLayout();
+            this.panelPesquisar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelCadastrar.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -83,10 +83,99 @@
             this.panel2.Controls.Add(this.panelPesquisar);
             this.panel2.Controls.Add(this.btnCadastrar);
             this.panel2.Controls.Add(this.panelCadastrar);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(-4, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1091, 707);
             this.panel2.TabIndex = 6;
+            // 
+            // panelListBox
+            // 
+            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelListBox.BackColor = System.Drawing.Color.White;
+            this.panelListBox.Controls.Add(this.lboLivros);
+            this.panelListBox.Controls.Add(this.panel3);
+            this.panelListBox.Location = new System.Drawing.Point(39, 404);
+            this.panelListBox.Name = "panelListBox";
+            this.panelListBox.Size = new System.Drawing.Size(1027, 288);
+            this.panelListBox.TabIndex = 9;
+            // 
+            // lboLivros
+            // 
+            this.lboLivros.FormattingEnabled = true;
+            this.lboLivros.ItemHeight = 16;
+            this.lboLivros.Location = new System.Drawing.Point(20, 57);
+            this.lboLivros.Name = "lboLivros";
+            this.lboLivros.Size = new System.Drawing.Size(977, 212);
+            this.lboLivros.TabIndex = 5;
+            this.lboLivros.SelectedIndexChanged += new System.EventHandler(this.lboLivros_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Location = new System.Drawing.Point(20, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 44);
+            this.panel3.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(124, 23);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Lista de Livros";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panelPesquisar
+            // 
+            this.panelPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPesquisar.BackColor = System.Drawing.Color.White;
+            this.panelPesquisar.Controls.Add(this.pictureBox3);
+            this.panelPesquisar.Controls.Add(this.txtPesquisar);
+            this.panelPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelPesquisar.Location = new System.Drawing.Point(372, 14);
+            this.panelPesquisar.Name = "panelPesquisar";
+            this.panelPesquisar.Size = new System.Drawing.Size(430, 43);
+            this.panelPesquisar.TabIndex = 8;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::winforms_biblioteca_design.Properties.Resources.lupa__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisar.BackColor = System.Drawing.Color.White;
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(63, 9);
+            this.txtPesquisar.Multiline = true;
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(363, 31);
+            this.txtPesquisar.TabIndex = 0;
             // 
             // btnCadastrar
             // 
@@ -102,83 +191,6 @@
             this.btnCadastrar.Text = "+    Novo Livro";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisar.BackColor = System.Drawing.Color.White;
-            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(63, 9);
-            this.txtPesquisar.Multiline = true;
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(363, 31);
-            this.txtPesquisar.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::winforms_biblioteca_design.Properties.Resources.lupa__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panelPesquisar
-            // 
-            this.panelPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPesquisar.BackColor = System.Drawing.Color.White;
-            this.panelPesquisar.Controls.Add(this.pictureBox3);
-            this.panelPesquisar.Controls.Add(this.txtPesquisar);
-            this.panelPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelPesquisar.Location = new System.Drawing.Point(372, 14);
-            this.panelPesquisar.Name = "panelPesquisar";
-            this.panelPesquisar.Size = new System.Drawing.Size(430, 43);
-            this.panelPesquisar.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
-            this.pictureBox1.Image = global::winforms_biblioteca_design.Properties.Resources.livro_de_enderecos;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(17, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 44);
-            this.panel1.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 23);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Cadastro de Livro";
-            // 
             // panelCadastrar
             // 
             this.panelCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -188,62 +200,10 @@
             this.panelCadastrar.Controls.Add(this.panel4);
             this.panelCadastrar.Controls.Add(this.panel1);
             this.panelCadastrar.Controls.Add(this.pictureBox1);
-            this.panelCadastrar.Location = new System.Drawing.Point(43, 74);
+            this.panelCadastrar.Location = new System.Drawing.Point(39, 74);
             this.panelCadastrar.Name = "panelCadastrar";
-            this.panelCadastrar.Size = new System.Drawing.Size(1005, 309);
+            this.panelCadastrar.Size = new System.Drawing.Size(1027, 309);
             this.panelCadastrar.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(20, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 44);
-            this.panel3.TabIndex = 4;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 23);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Lista de Livros";
-            // 
-            // lboLivros
-            // 
-            this.lboLivros.FormattingEnabled = true;
-            this.lboLivros.ItemHeight = 16;
-            this.lboLivros.Location = new System.Drawing.Point(20, 57);
-            this.lboLivros.Name = "lboLivros";
-            this.lboLivros.Size = new System.Drawing.Size(954, 212);
-            this.lboLivros.TabIndex = 5;
-            this.lboLivros.SelectedIndexChanged += new System.EventHandler(this.lboLivros_SelectedIndexChanged);
-            // 
-            // panelListBox
-            // 
-            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelListBox.BackColor = System.Drawing.Color.White;
-            this.panelListBox.Controls.Add(this.lboLivros);
-            this.panelListBox.Controls.Add(this.panel3);
-            this.panelListBox.Location = new System.Drawing.Point(43, 404);
-            this.panelListBox.Name = "panelListBox";
-            this.panelListBox.Size = new System.Drawing.Size(1005, 288);
-            this.panelListBox.TabIndex = 9;
             // 
             // panel4
             // 
@@ -270,8 +230,18 @@
             this.panel4.Controls.Add(this.txtISBN);
             this.panel4.Location = new System.Drawing.Point(223, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(779, 293);
+            this.panel4.Size = new System.Drawing.Size(820, 293);
             this.panel4.TabIndex = 6;
+            // 
+            // txtGenero
+            // 
+            this.txtGenero.BackColor = System.Drawing.Color.White;
+            this.txtGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGenero.Location = new System.Drawing.Point(554, 63);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(240, 28);
+            this.txtGenero.TabIndex = 41;
             // 
             // btnLimpar
             // 
@@ -279,7 +249,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(244, 210);
+            this.btnLimpar.Location = new System.Drawing.Point(271, 210);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(95, 43);
             this.btnLimpar.TabIndex = 40;
@@ -292,7 +262,7 @@
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(637, 210);
+            this.btnExcluir.Location = new System.Drawing.Point(664, 210);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(125, 43);
             this.btnExcluir.TabIndex = 23;
@@ -305,7 +275,7 @@
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(360, 210);
+            this.btnSalvar.Location = new System.Drawing.Point(387, 210);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(119, 43);
             this.btnSalvar.TabIndex = 39;
@@ -319,7 +289,7 @@
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(19, 62);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(216, 28);
+            this.txtTitulo.Size = new System.Drawing.Size(239, 28);
             this.txtTitulo.TabIndex = 24;
             // 
             // txtQuantidade
@@ -329,7 +299,7 @@
             this.txtQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidade.Location = new System.Drawing.Point(293, 129);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(216, 28);
+            this.txtQuantidade.Size = new System.Drawing.Size(239, 28);
             this.txtQuantidade.TabIndex = 32;
             // 
             // btnAtualizar
@@ -338,7 +308,7 @@
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.ForeColor = System.Drawing.Color.White;
-            this.btnAtualizar.Location = new System.Drawing.Point(500, 210);
+            this.btnAtualizar.Location = new System.Drawing.Point(527, 210);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(119, 43);
             this.btnAtualizar.TabIndex = 38;
@@ -382,7 +352,7 @@
             this.txtEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditora.Location = new System.Drawing.Point(20, 128);
             this.txtEditora.Name = "txtEditora";
-            this.txtEditora.Size = new System.Drawing.Size(216, 28);
+            this.txtEditora.Size = new System.Drawing.Size(239, 28);
             this.txtEditora.TabIndex = 26;
             // 
             // txtAutor
@@ -392,7 +362,7 @@
             this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutor.Location = new System.Drawing.Point(291, 62);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(217, 28);
+            this.txtAutor.Size = new System.Drawing.Size(240, 28);
             this.txtAutor.TabIndex = 30;
             // 
             // label8
@@ -442,7 +412,7 @@
             this.txtAnoPublicacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnoPublicacao.Location = new System.Drawing.Point(555, 129);
             this.txtAnoPublicacao.Name = "txtAnoPublicacao";
-            this.txtAnoPublicacao.Size = new System.Drawing.Size(216, 28);
+            this.txtAnoPublicacao.Size = new System.Drawing.Size(239, 28);
             this.txtAnoPublicacao.TabIndex = 35;
             // 
             // txtISBN
@@ -452,18 +422,48 @@
             this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(19, 200);
             this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(216, 28);
+            this.txtISBN.Size = new System.Drawing.Size(239, 28);
             this.txtISBN.TabIndex = 28;
             // 
-            // txtGenero
+            // panel1
             // 
-            this.txtGenero.BackColor = System.Drawing.Color.White;
-            this.txtGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGenero.Location = new System.Drawing.Point(554, 63);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(217, 28);
-            this.txtGenero.TabIndex = 41;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(17, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 44);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Cadastro de Livro";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.pictureBox1.Image = global::winforms_biblioteca_design.Properties.Resources.livro_de_enderecos;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Livro
             // 
@@ -474,20 +474,20 @@
             this.Name = "Livro";
             this.Size = new System.Drawing.Size(1091, 707);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelPesquisar.ResumeLayout(false);
-            this.panelPesquisar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelCadastrar.ResumeLayout(false);
+            this.panelListBox.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelListBox.ResumeLayout(false);
+            this.panelPesquisar.ResumeLayout(false);
+            this.panelPesquisar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelCadastrar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

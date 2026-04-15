@@ -23,14 +23,7 @@ namespace winforms_biblioteca_design
 
 
         }
-
-        private void btnLivros_Click(object sender, EventArgs e)
-        {
-            tcControle.SelectedTab = tpLivros;
-            livro = new Livro();
-            livro.Dock = DockStyle.Fill;
-            tpLivros.Controls.Add(livro);
-        }
+        #region METODOS
 
         public void ArredondarBotao(Button btn, int raio)
         {
@@ -55,6 +48,34 @@ namespace winforms_biblioteca_design
             ArredondarBotao(btnFuncionarios, 10);
         }
 
-   
+
+        public void CorBotao(Button botao)
+        {
+            btnFuncionarios.BackColor = Color.FromArgb(15, 29, 57);
+            btnUsuarios.BackColor = Color.FromArgb(15, 29, 57);
+            btnLivros.BackColor = Color.FromArgb(15, 29, 57);
+
+            botao.BackColor = Color.FromArgb(42, 75, 148);
+        }
+        #endregion
+        private void btnLivros_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnLivros);
+            tcControle.SelectedTab = tpLivros;
+            livro = new Livro();
+            livro.Dock = DockStyle.Fill;
+            tpLivros.Controls.Add(livro);
+        }
+
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnFuncionarios);
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnUsuarios);
+        }
     }
 }
