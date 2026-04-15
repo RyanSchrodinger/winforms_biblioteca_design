@@ -55,13 +55,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAnoPublicacao = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelPesquisar.SuspendLayout();
@@ -250,6 +250,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.txtGenero);
             this.panel4.Controls.Add(this.btnLimpar);
             this.panel4.Controls.Add(this.btnExcluir);
             this.panel4.Controls.Add(this.btnSalvar);
@@ -261,7 +262,6 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.txtEditora);
             this.panel4.Controls.Add(this.txtAutor);
-            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label4);
@@ -395,14 +395,6 @@
             this.txtAutor.Size = new System.Drawing.Size(217, 28);
             this.txtAutor.TabIndex = 30;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(554, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 24);
-            this.comboBox1.TabIndex = 37;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -463,6 +455,16 @@
             this.txtISBN.Size = new System.Drawing.Size(216, 28);
             this.txtISBN.TabIndex = 28;
             // 
+            // txtGenero
+            // 
+            this.txtGenero.BackColor = System.Drawing.Color.White;
+            this.txtGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGenero.Location = new System.Drawing.Point(554, 63);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(217, 28);
+            this.txtGenero.TabIndex = 41;
+            // 
             // Livro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -519,12 +521,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.TextBox txtAutor;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAnoPublicacao;
         private System.Windows.Forms.TextBox txtISBN;
+        private System.Windows.Forms.TextBox txtGenero;
     }
 }

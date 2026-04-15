@@ -78,6 +78,7 @@ namespace winforms_biblioteca_design.Controls
         }
         #endregion
 
+       
 
         public void AtualizarLista()
         {
@@ -88,6 +89,8 @@ namespace winforms_biblioteca_design.Controls
 
             foreach (LivrosRow dado in dados) lboLivros.Items.Add(dado);
         }
+
+
         #endregion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -102,6 +105,16 @@ namespace winforms_biblioteca_design.Controls
 
         private void lboLivros_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lboLivros.SelectedItem == null) return;
+            LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+            if (livro == null) return;
+            txtAutor.Text = livro.Autor;
+            txtEditora.Text = livro.Editora;
+            txtGenero.Text = livro.Genero;
+            txtISBN.Text = livro.ISBN;
+            txtTitulo.Text = livro.Titulo;
+            txtQuantidade.Text = livro.QuantidadeDisponivel.ToString();
+            txtAnoPublicacao.Text = livro.DataCadastro.ToString("dd/MM/yyyy");
 
         }
     }
