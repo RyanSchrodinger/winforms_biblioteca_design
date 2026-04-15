@@ -49,17 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BibliotecaDBDataSet1.cs">
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Livro.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Livro.Designer.cs">
       <DependentUpon>Livro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\se.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\se.Designer.cs">
-      <DependentUpon>se.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -71,9 +73,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\Livro.resx">
       <DependentUpon>Livro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\se.resx">
-      <DependentUpon>se.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -88,6 +87,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BibliotecaDBDataSet1.xsc">
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDBDataSet1.xss">
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -230,6 +230,7 @@
             this.lboLivros.Name = "lboLivros";
             this.lboLivros.Size = new System.Drawing.Size(954, 212);
             this.lboLivros.TabIndex = 5;
+            this.lboLivros.SelectedIndexChanged += new System.EventHandler(this.lboLivros_SelectedIndexChanged);
             // 
             // panelListBox
             // 

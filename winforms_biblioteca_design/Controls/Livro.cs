@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using winforms_biblioteca_design.BibliotecaDBDataSetTableAdapters;
+using static winforms_biblioteca_design.BibliotecaDBDataSet;
 
 namespace winforms_biblioteca_design.Controls
 {
@@ -18,13 +20,16 @@ namespace winforms_biblioteca_design.Controls
         {
             InitializeComponent();
             AtivarArredondamento();
+            AtualizarLista();
 
 
         }
 
+        #region METODOS
+
         #region ARREDONDAMENTO DE CONTROLES
 
-        
+
         public void ArredondarControle(Control ctrl, int raio)
         {
             if (ctrl.Width <= 0 || ctrl.Height <= 0)
@@ -74,12 +79,28 @@ namespace winforms_biblioteca_design.Controls
         #endregion
 
 
+        public void AtualizarLista()
+        {
+            lboLivros.Items.Clear();
+            var livro = new LivrosTableAdapter();
+            var dados = from linha in livro.GetData()
+                        select linha;
+
+            foreach (LivrosRow dado in dados) lboLivros.Items.Add(dado);
+        }
+        #endregion
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lboLivros_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
