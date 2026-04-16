@@ -154,5 +154,17 @@
   <ItemGroup>
     <None Include="Resources\livro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opcao-de-salvar-arquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

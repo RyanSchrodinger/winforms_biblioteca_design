@@ -153,6 +153,26 @@ namespace winforms_biblioteca_design.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excluir__1_ {
+            get {
+                object obj = ResourceManager.GetObject("excluir (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lapis {
+            get {
+                object obj = ResourceManager.GetObject("lapis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap livro {
             get {
                 object obj = ResourceManager.GetObject("livro", resourceCulture);
@@ -183,6 +203,16 @@ namespace winforms_biblioteca_design.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mais {
+            get {
+                object obj = ResourceManager.GetObject("mais", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mulher {
             get {
                 object obj = ResourceManager.GetObject("mulher", resourceCulture);
@@ -196,6 +226,16 @@ namespace winforms_biblioteca_design.Properties {
         internal static System.Drawing.Bitmap mulher_64 {
             get {
                 object obj = ResourceManager.GetObject("mulher 64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opcao_de_salvar_arquivo {
+            get {
+                object obj = ResourceManager.GetObject("opcao-de-salvar-arquivo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
