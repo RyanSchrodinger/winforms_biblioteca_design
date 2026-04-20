@@ -212,7 +212,22 @@ namespace winforms_biblioteca_design.Controls
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (lboLivros.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um livro para excluir.");
+                return;
+            }
 
+            LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+            if (livro == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+
+            var livros = new LivrosTableAdapter();
+            livros.Delete(livro.LivroID);
+            AtualizarLista();
         }
     }
 }
