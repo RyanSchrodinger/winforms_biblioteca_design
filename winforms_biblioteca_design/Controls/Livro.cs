@@ -68,7 +68,7 @@ namespace winforms_biblioteca_design.Controls
             AtivarArredondamentoControle(panelListBox, 20);
             AtivarArredondamentoControle(panelPesquisar, 10);
 
-            AtivarArredondamentoControle(btnCadastrar, 10);
+            AtivarArredondamentoControle(btnNovoLivro, 10);
             AtivarArredondamentoControle(btnExcluir, 10);
             AtivarArredondamentoControle(btnAtualizar, 10);
             AtivarArredondamentoControle(btnSalvar, 10);
@@ -101,7 +101,35 @@ namespace winforms_biblioteca_design.Controls
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            if(lboLivros.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um livro para atualizar.");
+                return;
+            }
 
+            LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+            if (livro == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+            livro.Titulo = txtTitulo.Text;
+            livro.Autor = txtAutor.Text;
+            livro.Editora = txtEditora.Text;
+            livro.ISBN = txtISBN.Text;
+            livro.Genero = txtGenero.Text;
+
+            try
+            {
+                livro.QuantidadeDisponivel = int.Parse(txtQuantidade.Text);
+                var livros = new LivrosTableAdapter();
+                livros.Update(livro.LivroID, livro.Titulo, livro.Genero, livro.Autor, livro.Editora, livro.ISBN, livro.QuantidadeDisponivel);
+                AtualizarLista();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Quantidade deve ser um número inteiro.");
+            }
         }
 
         private void lboLivros_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,5 +166,53 @@ namespace winforms_biblioteca_design.Controls
         }
 
         
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtAnoPublicacao.Clear();
+            txtAutor.Clear();
+            txtEditora.Clear();
+            txtGenero.Clear();  
+            txtISBN.Clear();
+            txtQuantidade.Clear();  
+            txtTitulo.Clear();
+        }
+
+       
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+          
+        }
+
+        private void btnNovoLivro_Click(object sender, EventArgs e)
+        {
+
+            string titulo = txtTitulo.Text;
+            string autor = txtAutor.Text;
+            string editora = txtEditora.Text;
+            string isbn = txtISBN.Text;
+            string genero = txtGenero.Text;
+
+            try
+            {
+                int quantidade = int.Parse(txtQuantidade.Text);
+                var livros = new LivrosTableAdapter();
+                livros.Insert(titulo, genero, autor, editora, isbn, quantidade);
+                AtualizarLista();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
