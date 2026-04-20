@@ -71,7 +71,6 @@ namespace winforms_biblioteca_design.Controls
             AtivarArredondamentoControle(btnNovoLivro, 10);
             AtivarArredondamentoControle(btnExcluir, 10);
             AtivarArredondamentoControle(btnAtualizar, 10);
-            AtivarArredondamentoControle(btnSalvar, 10);
             AtivarArredondamentoControle(panelLivro, 15);
 
             // Se quiser textbox arredondado:
@@ -94,43 +93,9 @@ namespace winforms_biblioteca_design.Controls
 
         #endregion
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-            if(lboLivros.SelectedItem == null)
-            {
-                MessageBox.Show("Selecione um livro para atualizar.");
-                return;
-            }
-
-            LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
-            if (livro == null)
-            {
-                MessageBox.Show("Seleção inválida.");
-                return;
-            }
-            livro.Titulo = txtTitulo.Text;
-            livro.Autor = txtAutor.Text;
-            livro.Editora = txtEditora.Text;
-            livro.ISBN = txtISBN.Text;
-            livro.Genero = txtGenero.Text;
-
-            try
-            {
-                livro.QuantidadeDisponivel = int.Parse(txtQuantidade.Text);
-                var livros = new LivrosTableAdapter();
-                livros.Update(livro.LivroID, livro.Titulo, livro.Genero, livro.Autor, livro.Editora, livro.ISBN, livro.QuantidadeDisponivel);
-                AtualizarLista();
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Quantidade deve ser um número inteiro.");
-            }
-        }
+       
 
         private void lboLivros_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -180,11 +145,7 @@ namespace winforms_biblioteca_design.Controls
 
        
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
-          
-        }
+     
 
         private void btnNovoLivro_Click(object sender, EventArgs e)
         {
@@ -228,6 +189,39 @@ namespace winforms_biblioteca_design.Controls
             var livros = new LivrosTableAdapter();
             livros.Delete(livro.LivroID);
             AtualizarLista();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (lboLivros.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um livro para atualizar.");
+                return;
+            }
+
+            LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+            if (livro == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+            livro.Titulo = txtTitulo.Text;
+            livro.Autor = txtAutor.Text;
+            livro.Editora = txtEditora.Text;
+            livro.ISBN = txtISBN.Text;
+            livro.Genero = txtGenero.Text;
+
+            try
+            {
+                livro.QuantidadeDisponivel = int.Parse(txtQuantidade.Text);
+                var livros = new LivrosTableAdapter();
+                livros.Update(livro.LivroID, livro.Titulo, livro.Genero, livro.Autor, livro.Editora, livro.ISBN, livro.QuantidadeDisponivel);
+                AtualizarLista();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Quantidade deve ser um número inteiro.");
+            }
         }
     }
 }
