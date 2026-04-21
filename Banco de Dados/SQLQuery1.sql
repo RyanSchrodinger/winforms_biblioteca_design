@@ -42,5 +42,4 @@ CREATE TABLE Requisicoes (
     FOREIGN KEY (FuncionarioID) REFERENCES Funcionarios(FuncionarioID)
 )
 
-
--- INSEERTS
+-- INSERTS USUARIOS
