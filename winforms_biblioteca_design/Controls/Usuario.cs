@@ -49,5 +49,23 @@ namespace winforms_biblioteca_design.Controls
             txtNome.Text = usuario.Nome;
             txtTelefone.Text = usuario.IsTelefoneNull() ? "" : usuario.Telefone;
         }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            TextBox pesquisa = sender as TextBox;
+            if (pesquisa.Text == "")
+            {
+                AtualizarLista();
+                return;
+            }
+            lboUsuarios.ClearSelected();
+            lboUsuarios.Items.Clear();
+            string textoDigitado = txtPesquisar.Text;
+            UsuariosTableAdapter dados = new UsuariosTableAdapter();
+            var usuarios = from linha in dados.GetData()
+                           where linha.Nome.ToLower().Contains(textoDigitado.ToLower())
+                           select linha;
+            foreach (var usuario in usuarios) lboUsuarios.Items.Add(usuario);
+        }
     }
 }
