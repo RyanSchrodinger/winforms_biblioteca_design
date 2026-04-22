@@ -118,7 +118,7 @@
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.panelLivro);
-            this.panel6.Location = new System.Drawing.Point(43, 12);
+            this.panel6.Location = new System.Drawing.Point(59, 12);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(323, 54);
@@ -130,9 +130,9 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(72, 34);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(194, 17);
+            this.label11.Size = new System.Drawing.Size(198, 17);
             this.label11.TabIndex = 5;
-            this.label11.Text = "Gerencie o acervo da biblioteca";
+            this.label11.Text = "Gerencie os usuários do sistema";
             // 
             // label10
             // 
@@ -199,11 +199,11 @@
             this.txtPesquisar.BackColor = System.Drawing.Color.White;
             this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(83, 9);
+            this.txtPesquisar.Location = new System.Drawing.Point(58, 9);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPesquisar.Multiline = true;
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(363, 31);
+            this.txtPesquisar.Size = new System.Drawing.Size(381, 31);
             this.txtPesquisar.TabIndex = 0;
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
@@ -665,7 +665,6 @@
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.btnNovoUsuario);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panelPesquisar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Usuario";
             this.Size = new System.Drawing.Size(1269, 706);
