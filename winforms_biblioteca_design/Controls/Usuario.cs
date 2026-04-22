@@ -33,8 +33,21 @@ namespace winforms_biblioteca_design.Controls
             foreach (UsuariosRow dado in dados) lboUsuarios.Items.Add(dado);
         }
 
+
         #endregion
 
-
+        private void lboUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lboUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione algum usuário");
+                return;
+            }
+            UsuariosRow usuario = lboUsuarios.SelectedItem as UsuariosRow;
+            if (usuario == null) return; 
+            txtEmail.Text = usuario.Email;
+            txtNome.Text = usuario.Nome;
+            txtTelefone.Text = usuario.IsTelefoneNull() ? "" : usuario.Telefone;
+        }
     }
 }
