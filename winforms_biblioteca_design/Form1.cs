@@ -48,6 +48,7 @@ namespace winforms_biblioteca_design
             ArredondarBotao(btnUsuarios, 10);
             ArredondarBotao(btnFuncionarios, 10);
             ArredondarBotao(panelPerfil, 20);
+            ArredondarBotao(btnEmprestimo, 10);
         }
 
 
