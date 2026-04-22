@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,10 +70,8 @@ namespace winforms_biblioteca_design.Controls
             AtivarArredondamentoControle(btnNovoLivro, 10);
             AtivarArredondamentoControle(btnExcluir, 10);
             AtivarArredondamentoControle(btnAtualizar, 10);
-            AtivarArredondamentoControle(panelLivro, 15);
 
-            // Se quiser textbox arredondado:
-            // AtivarArredondamentoControle(txtTitulo, 10);
+            
         }
         #endregion
 

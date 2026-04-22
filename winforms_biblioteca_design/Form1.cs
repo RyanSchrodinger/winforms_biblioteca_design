@@ -14,6 +14,7 @@ namespace winforms_biblioteca_design
 {
     public partial class Form1 : Form
     {
+        private Usuario usuario;
         private Livro livro;
         public Form1()
 
@@ -79,6 +80,10 @@ namespace winforms_biblioteca_design
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             CorBotao(btnUsuarios);
+            tcControle.SelectedTab = tpUsuarios;
+            usuario = new Usuario();
+            usuario.Dock = DockStyle.Fill;
+            tpUsuarios.Controls.Add(usuario);
         }
     }
 }
