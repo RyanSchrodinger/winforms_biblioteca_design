@@ -274,7 +274,7 @@
             this.lboUsuarios.Location = new System.Drawing.Point(27, 53);
             this.lboUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lboUsuarios.Name = "lboUsuarios";
-            this.lboUsuarios.Size = new System.Drawing.Size(1114, 154);
+            this.lboUsuarios.Size = new System.Drawing.Size(1114, 204);
             this.lboUsuarios.TabIndex = 5;
             // 
             // panel1

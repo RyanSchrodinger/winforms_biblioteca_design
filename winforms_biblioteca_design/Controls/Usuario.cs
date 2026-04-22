@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using winforms_biblioteca_design.BibliotecaDBDataSetTableAdapters;
+using static winforms_biblioteca_design.BibliotecaDBDataSet;
 
 namespace winforms_biblioteca_design.Controls
 {
@@ -15,7 +17,23 @@ namespace winforms_biblioteca_design.Controls
         public Usuario()
         {
             InitializeComponent();
+            AtualizarLista();
         }
+
+
+        #region METODOS
+
+        public void AtualizarLista()
+        {
+            lboUsuarios.Items.Clear();
+            var usuario = new UsuariosTableAdapter();
+            var dados = from linha in usuario.GetData()
+                        select linha;
+
+            foreach (UsuariosRow dado in dados) lboUsuarios.Items.Add(dado);
+        }
+
+        #endregion
 
 
     }
