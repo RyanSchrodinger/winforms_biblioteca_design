@@ -26,6 +26,26 @@ namespace winforms_biblioteca_design
         }
         #region METODOS
 
+
+        private void AbrirTela(Control tela)
+        {
+            // Descarta todos os controles anteriores
+            foreach (Control c in panelMolde.Controls)
+                c.Dispose();
+
+
+
+            panelMolde.Controls.Clear();
+            tela.Dock = DockStyle.Fill;
+            panelMolde.Controls.Add(tela);
+        }
+
+
+
+
+
+
+
         public void ArredondarBotao(Control cntr, int raio)
         {
             GraphicsPath path = new GraphicsPath();
@@ -66,25 +86,30 @@ namespace winforms_biblioteca_design
         private void btnLivros_Click(object sender, EventArgs e)
         {
             CorBotao(btnLivros);
-            tcControle.SelectedTab = tpLivros;
-            livro = new Livro();
-            livro.Dock = DockStyle.Fill;
-            tpLivros.Controls.Add(livro);
+            Livro livroControl = new Livro();
+            AbrirTela(livroControl);
         }
 
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
             CorBotao(btnFuncionarios);
+            Funcionario funcionarioControl = new Funcionario();
+            AbrirTela(funcionarioControl);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             CorBotao(btnUsuarios);
-            tcControle.SelectedTab = tpUsuarios;
-            usuario = new Usuario();
-            usuario.Dock = DockStyle.Fill;
-            tpUsuarios.Controls.Add(usuario);
+            Usuario usuarioControl = new Usuario();
+            AbrirTela(usuarioControl);
+        }
+
+        private void btnEmprestimo_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnEmprestimo);
+            Emprestimo emprestimoControl = new Emprestimo();
+            AbrirTela(emprestimoControl);
         }
     }
 }
