@@ -63,10 +63,16 @@
     <Compile Include="Controls\ControlEmprestimo.Designer.cs">
       <DependentUpon>ControlEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Emprestimo.cs">
+    <Compile Include="Controls\Controles Emprestimos\Consulta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Emprestimo.Designer.cs">
+    <Compile Include="Controls\Controles Emprestimos\Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Controles Emprestimos\Emprestimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Controles Emprestimos\Emprestimo.Designer.cs">
       <DependentUpon>Emprestimo.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Funcionario.cs">
@@ -98,7 +104,10 @@
     <EmbeddedResource Include="Controls\ControlEmprestimo.resx">
       <DependentUpon>ControlEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Emprestimo.resx">
+    <EmbeddedResource Include="Controls\Controles Emprestimos\Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Controles Emprestimos\Emprestimo.resx">
       <DependentUpon>Emprestimo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Livro.resx">
@@ -199,5 +208,6 @@
   <ItemGroup>
     <None Include="Resources\mais.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
