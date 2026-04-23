@@ -14,7 +14,13 @@ namespace winforms_biblioteca_design
 {
     public partial class Form1 : Form
     {
-       
+        Livro livroControl;
+        Funcionario funcionarioControl;
+        ControlEmprestimo emprestimoControl;
+        Usuario usuarioControl;
+
+
+
         public Form1()
 
         {
@@ -86,30 +92,50 @@ namespace winforms_biblioteca_design
 
         private void btnLivros_Click(object sender, EventArgs e)
         {
+            if (livroControl != null)
+            {
+                return;
+
+            }
             CorBotao(btnLivros);
-            Livro livroControl = new Livro();
+            livroControl = new Livro();
             AbrirTela(livroControl);
         }
 
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
+            if (funcionarioControl != null)
+            {
+                return;
+
+            }
             CorBotao(btnFuncionarios);
-            Funcionario funcionarioControl = new Funcionario();
+            funcionarioControl = new Funcionario();
             AbrirTela(funcionarioControl);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            if (usuarioControl != null)
+            {
+                return;
+
+            }
             CorBotao(btnUsuarios);
-            Usuario usuarioControl = new Usuario();
+            usuarioControl = new Usuario();
             AbrirTela(usuarioControl);
         }
 
         private void btnEmprestimo_Click(object sender, EventArgs e)
         {
+            if (emprestimoControl != null)
+            {
+                return;
+
+            }
             CorBotao(btnEmprestimo);
-            ControlEmprestimo emprestimoControl = new ControlEmprestimo();
+            emprestimoControl = new ControlEmprestimo();
             AbrirTela(emprestimoControl);
         }
     }

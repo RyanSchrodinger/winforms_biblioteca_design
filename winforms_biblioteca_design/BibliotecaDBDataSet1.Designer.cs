@@ -2098,7 +2098,7 @@ namespace winforms_biblioteca_design {
                         return ((global::System.DateTime)(this[this.tableRequisicoes.DataDevolucaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DataDevolucao\' na tabela \'Requisicoes\' é DBNull.", e);
+                                throw new global::System.Data.StrongTypingException("O valor da coluna \'DataDevolucao\' na tabela \'Requisicoes\' é DBNull.", e);
                     }
                 }
                 set {
@@ -3274,38 +3274,17 @@ SELECT FuncionarioID, NomeUsuario, SenhaHash, NomeCompleto, Cargo, Email, DataCa
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.EmprestarLivro";
+            this._commandCollection[0].CommandText = "dbo.ObterEmprestimos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LivroIDEmprestado", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FuncinarioIDEmprestado", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioIDEmprestado", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BibliotecaDBDataSet.RequisicoesDataTable dataTable, global::System.Nullable<int> LivroIDEmprestado, global::System.Nullable<int> FuncinarioIDEmprestado, global::System.Nullable<int> UsuarioIDEmprestado) {
+        public virtual int Fill(BibliotecaDBDataSet.RequisicoesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((LivroIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(LivroIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((FuncinarioIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(FuncinarioIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((UsuarioIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(UsuarioIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3317,26 +3296,8 @@ SELECT FuncionarioID, NomeUsuario, SenhaHash, NomeCompleto, Cargo, Email, DataCa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BibliotecaDBDataSet.RequisicoesDataTable GetData(global::System.Nullable<int> LivroIDEmprestado, global::System.Nullable<int> FuncinarioIDEmprestado, global::System.Nullable<int> UsuarioIDEmprestado) {
+        public virtual BibliotecaDBDataSet.RequisicoesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((LivroIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(LivroIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((FuncinarioIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(FuncinarioIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((UsuarioIDEmprestado.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(UsuarioIDEmprestado.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
             BibliotecaDBDataSet.RequisicoesDataTable dataTable = new BibliotecaDBDataSet.RequisicoesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

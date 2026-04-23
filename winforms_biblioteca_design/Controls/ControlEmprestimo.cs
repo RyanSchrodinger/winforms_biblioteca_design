@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using winforms_biblioteca_design.Controls.Controles_Emprestimos;
 
 namespace winforms_biblioteca_design.Controls
 {
     public partial class ControlEmprestimo : UserControl
     {
+        Consulta consulta;
         Emprestimo emprestimo;
         public ControlEmprestimo()
         {
@@ -71,6 +73,18 @@ namespace winforms_biblioteca_design.Controls
             emprestimo.Dock = DockStyle.Fill;
             tcEmprestimo.SelectTab(tpEmprestar);
             tpEmprestar.Controls.Add(emprestimo);
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if(consulta != null)
+            {
+                return;
+            }
+            consulta = new Consulta();
+            consulta.Dock = DockStyle.Fill;
+            tcEmprestimo.SelectTab(tpConsultar);
+            tpConsultar.Controls.Add(consulta);
         }
     }
 }

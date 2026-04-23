@@ -36,10 +36,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelConsultar = new System.Windows.Forms.Panel();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.panelDevolver = new System.Windows.Forms.Panel();
-            this.btnDevolver = new System.Windows.Forms.Button();
             this.panelEmprestar = new System.Windows.Forms.Panel();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnDevolver = new System.Windows.Forms.Button();
             this.btnEmprestar = new System.Windows.Forms.Button();
             this.tcEmprestimo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -146,6 +146,28 @@
             this.panelConsultar.Size = new System.Drawing.Size(310, 36);
             this.panelConsultar.TabIndex = 3;
             // 
+            // panelDevolver
+            // 
+            this.panelDevolver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDevolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panelDevolver.Controls.Add(this.btnDevolver);
+            this.panelDevolver.Location = new System.Drawing.Point(318, 3);
+            this.panelDevolver.Name = "panelDevolver";
+            this.panelDevolver.Size = new System.Drawing.Size(309, 36);
+            this.panelDevolver.TabIndex = 2;
+            // 
+            // panelEmprestar
+            // 
+            this.panelEmprestar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEmprestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panelEmprestar.Controls.Add(this.btnEmprestar);
+            this.panelEmprestar.Location = new System.Drawing.Point(3, 3);
+            this.panelEmprestar.Name = "panelEmprestar";
+            this.panelEmprestar.Size = new System.Drawing.Size(309, 36);
+            this.panelEmprestar.TabIndex = 1;
+            // 
             // btnConsultar
             // 
             this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -164,20 +186,10 @@
             this.btnConsultar.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnConsultar.Size = new System.Drawing.Size(257, 43);
             this.btnConsultar.TabIndex = 3;
-            this.btnConsultar.Text = "          Livros";
+            this.btnConsultar.Text = "          Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultar.UseVisualStyleBackColor = false;
-            // 
-            // panelDevolver
-            // 
-            this.panelDevolver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDevolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panelDevolver.Controls.Add(this.btnDevolver);
-            this.panelDevolver.Location = new System.Drawing.Point(318, 3);
-            this.panelDevolver.Name = "panelDevolver";
-            this.panelDevolver.Size = new System.Drawing.Size(309, 36);
-            this.panelDevolver.TabIndex = 2;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnDevolver
             // 
@@ -200,17 +212,6 @@
             this.btnDevolver.Text = "          Livros";
             this.btnDevolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDevolver.UseVisualStyleBackColor = false;
-            // 
-            // panelEmprestar
-            // 
-            this.panelEmprestar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEmprestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panelEmprestar.Controls.Add(this.btnEmprestar);
-            this.panelEmprestar.Location = new System.Drawing.Point(3, 3);
-            this.panelEmprestar.Name = "panelEmprestar";
-            this.panelEmprestar.Size = new System.Drawing.Size(309, 36);
-            this.panelEmprestar.TabIndex = 1;
             // 
             // btnEmprestar
             // 

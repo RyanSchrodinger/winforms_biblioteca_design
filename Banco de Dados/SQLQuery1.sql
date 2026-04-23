@@ -166,7 +166,7 @@ USE BibliotecaDB
         END
 
     GO
-        CREATE PROCEDURE EmprestarLivro
+        ALTER PROCEDURE EmprestarLivro
             @LivroIDEmprestado INT,
             @FuncinarioIDEmprestado INT,
             @UsuarioIDEmprestado INT
@@ -175,9 +175,8 @@ USE BibliotecaDB
             UPDATE Livros SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
             WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
 
-            INSERT INTO Requisicoes(UsuarioID, LivroID, FuncionarioID, DataDevolucao)
-            VALUES(@UsuarioIDEmprestado,@LivroIDEmprestado,@FuncinarioIDEmprestado, DATEADD(DAY,7,GETDATE())
-            )
+            INSERT INTO Requisicoes(UsuarioID, LivroID, FuncionarioID, DataDevolucao,Status)
+            VALUES(@UsuarioIDEmprestado,@LivroIDEmprestado,@FuncinarioIDEmprestado, DATEADD(DAY,7,GETDATE()),'Aprovada')
         END
 
 
