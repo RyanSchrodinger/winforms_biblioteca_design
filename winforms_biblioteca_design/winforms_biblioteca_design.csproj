@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ControlEmprestimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlEmprestimo.Designer.cs">
+      <DependentUpon>ControlEmprestimo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Emprestimo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ControlEmprestimo.resx">
+      <DependentUpon>ControlEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Emprestimo.resx">
       <DependentUpon>Emprestimo.cs</DependentUpon>
     </EmbeddedResource>

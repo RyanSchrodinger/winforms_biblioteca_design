@@ -21,7 +21,6 @@ namespace winforms_biblioteca_design.Controls
             AtivarArredondamento();
             AtualizarLista();
 
-
         }
 
         #region METODOS

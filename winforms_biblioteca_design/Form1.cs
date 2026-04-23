@@ -14,8 +14,7 @@ namespace winforms_biblioteca_design
 {
     public partial class Form1 : Form
     {
-        private Usuario usuario;
-        private Livro livro;
+       
         public Form1()
 
         {
@@ -44,7 +43,7 @@ namespace winforms_biblioteca_design
 
 
 
-
+        #region ARREDONDAMENTO DE CONTROLES
 
         public void ArredondarBotao(Control cntr, int raio)
         {
@@ -70,6 +69,8 @@ namespace winforms_biblioteca_design
             ArredondarBotao(panelPerfil, 20);
             ArredondarBotao(btnEmprestimo, 10);
         }
+
+        #endregion
 
 
         public void CorBotao(Button botao)
@@ -108,7 +109,7 @@ namespace winforms_biblioteca_design
         private void btnEmprestimo_Click(object sender, EventArgs e)
         {
             CorBotao(btnEmprestimo);
-            Emprestimo emprestimoControl = new Emprestimo();
+            ControlEmprestimo emprestimoControl = new ControlEmprestimo();
             AbrirTela(emprestimoControl);
         }
     }
