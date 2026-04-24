@@ -188,6 +188,6 @@ namespace winforms_biblioteca_design.Controls
             {
                 MessageBox.Show("Erro ao atualizar usuário: " + ex.Message);
             }
-        }
+        } 
     }
 }

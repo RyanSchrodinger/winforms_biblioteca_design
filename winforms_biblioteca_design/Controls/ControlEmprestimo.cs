@@ -25,59 +25,72 @@ namespace winforms_biblioteca_design.Controls
 
         #region ARREDONDAMENTO DE CONTROLES
 
-        public void ArredondarBotao(Control cntr, int raio)
+
+        public void ArredondarControle(Control ctrl, int raio)
         {
+            if (ctrl.Width <= 0 || ctrl.Height <= 0)
+                return;
+
             GraphicsPath path = new GraphicsPath();
 
             path.StartFigure();
 
             path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(cntr.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(cntr.Width - raio, cntr.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, cntr.Height - raio, raio, raio, 90, 90);
+            path.AddArc(ctrl.Width - raio, 0, raio, raio, 270, 90);
+            path.AddArc(ctrl.Width - raio, ctrl.Height - raio, raio, raio, 0, 90);
+            path.AddArc(0, ctrl.Height - raio, raio, raio, 90, 90);
 
             path.CloseFigure();
 
-            cntr.Region = new Region(path);
+            ctrl.Region = new Region(path);
         }
 
-        public void ArredondarCadaElemento()
+
+        public void AtivarArredondamentoControle(Control ctrl, int raio)
         {
-            ArredondarBotao(btnEmprestar, 15);
-            ArredondarBotao(btnDevolver, 15);
-            ArredondarBotao(btnConsultar, 15);
-            ArredondarBotao(panelEmprestar,15);
-            ArredondarBotao(panelDevolver, 15);
-            ArredondarBotao(panelConsultar, 15);
+            ctrl.Resize += (s, e) =>
+            {
+                ArredondarControle(ctrl, raio);
+            };
+
+
+            ArredondarControle(ctrl, raio);
         }
+
+
+        public void AtivarArredondamento()
+        {
+            ArredondarControle(btnConsultar);
+
+
+
+        }
+        #endregion
+
+
+
 
         public void CorBotao(Button botao)
         {
+            
             btnConsultar.BackColor = Color.FromArgb(15, 29, 57);
             btnDevolver.BackColor = Color.FromArgb(15, 29, 57);
             btnEmprestar.BackColor = Color.FromArgb(15, 29, 57);
 
             botao.BackColor = Color.FromArgb(42, 75, 148);
+           
         }
 
 
         #endregion
 
-        private void btnEmprestar_Click(object sender, EventArgs e)
-        {
-            if(emprestimo != null)
-            {
-                return;
-            }
-            emprestimo = new Emprestimo();
-            emprestimo.Dock = DockStyle.Fill;
-            tcEmprestimo.SelectTab(tpEmprestar);
-            tpEmprestar.Controls.Add(emprestimo);
-        }
+        
+        
+       
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if(consulta != null)
+            if (consulta != null)
             {
                 return;
             }
@@ -85,6 +98,18 @@ namespace winforms_biblioteca_design.Controls
             consulta.Dock = DockStyle.Fill;
             tcEmprestimo.SelectTab(tpConsultar);
             tpConsultar.Controls.Add(consulta);
+        }
+
+        private void btnEmprestar_Click(object sender, EventArgs e)
+        {
+            if (emprestimo != null)
+            {
+                return;
+            }
+            emprestimo = new Emprestimo();
+            emprestimo.Dock = DockStyle.Fill;
+            tcEmprestimo.SelectTab(tpEmprestar);
+            tpEmprestar.Controls.Add(emprestimo);
         }
     }
 }
