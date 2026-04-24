@@ -688,6 +688,7 @@
             this.btnAtualizar.TabIndex = 38;
             this.btnAtualizar.Text = "   Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 
@@ -707,6 +708,7 @@
             this.btnExcluir.TabIndex = 23;
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // pictureBox4
             // 

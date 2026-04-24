@@ -139,6 +139,55 @@ namespace winforms_biblioteca_design.Controls
 
         }
 
-       
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (lboUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+                return;
+            }
+
+            UsuariosRow usuario = lboUsuarios.SelectedItem as UsuariosRow;
+            if (usuario == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+
+            var usuarios = new UsuariosTableAdapter();
+            usuarios.Delete(usuario.UsuarioID);
+            AtualizarLista();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+            if (lboUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um usuário para atualizar.");
+                return;
+            }
+
+            UsuariosRow usuario = lboUsuarios.SelectedItem as UsuariosRow;
+            if (usuario == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+            usuario.Nome = txtNome.Text;
+            usuario.Email = txtEmail.Text;
+            usuario.Telefone = txtTelefone.Text;
+            usuario.DataCadastro = DateTime.Parse(txtDataCadastro.Text);
+            try
+            {
+                var usuarios = new UsuariosTableAdapter();
+                usuarios.Update(usuario.UsuarioID, usuario.Nome, usuario.Email, usuario.Telefone);
+                AtualizarLista();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar usuário: " + ex.Message);
+            }
+        }
     }
 }

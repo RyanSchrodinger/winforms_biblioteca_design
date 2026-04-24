@@ -182,3 +182,35 @@ USE BibliotecaDB
 
 EXEC EmprestarLivro 20, 1,12 
 SELECT * FROM Requisicoes
+
+-- INSERTS USUÁRIOS
+
+GO
+    CREATE PROCEDURE AtualizarUsuarios
+    @IdSelecionado INT,
+    @Nome VARCHAR(100),
+    @Email VARCHAR(100),
+    @Telefone VARCHAR(100)
+    AS
+    BEGIN
+        UPDATE Usuarios
+        SET
+            Nome = @Nome,
+            Email = @Email,
+            Telefone = @Telefone
+        WHERE
+            UsuarioID = @IdSelecionado
+    END
+GO
+
+
+GO
+    CREATE PROCEDURE DeletarUsuario
+    @IdSelecionado INT
+    AS
+    BEGIN
+        DELETE FROM Usuarios WHERE UsuarioID = @IdSelecionado
+    END
+GO
+
+    select * from Usuarios
