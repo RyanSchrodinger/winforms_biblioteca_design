@@ -32,15 +32,12 @@ namespace winforms_biblioteca_design
         #region METODOS
 
 
+        private Control telaAtiva;
+
         private void AbrirTela(Control tela)
         {
-            // Descarta todos os controles anteriores
-            foreach (Control c in panelMolde.Controls)
-                c.Dispose();
-
-
-
             panelMolde.Controls.Clear();
+
             tela.Dock = DockStyle.Fill;
             panelMolde.Controls.Add(tela);
         }
@@ -84,59 +81,78 @@ namespace winforms_biblioteca_design
             btnFuncionarios.BackColor = Color.FromArgb(15, 29, 57);
             btnUsuarios.BackColor = Color.FromArgb(15, 29, 57);
             btnLivros.BackColor = Color.FromArgb(15, 29, 57);
+            btnEmprestimo.BackColor = Color.FromArgb(15, 29, 57);
 
             botao.BackColor = Color.FromArgb(42, 75, 148);
         }
         #endregion
 
 
+
         private void btnLivros_Click(object sender, EventArgs e)
         {
-            if (livroControl != null)
+            CorBotao(btnLivros);
+
+            if (livroControl == null)
             {
+                livroControl = new Livro();
+            }
+
+
+            if (panelMolde.Controls.Contains(livroControl))
                 return;
 
-            }
-            CorBotao(btnLivros);
-            livroControl = new Livro();
             AbrirTela(livroControl);
         }
 
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
-            if (funcionarioControl != null)
+            CorBotao(btnFuncionarios);
+
+            if (funcionarioControl == null)
             {
+                funcionarioControl = new Funcionario();
+            }
+
+
+            if (panelMolde.Controls.Contains(funcionarioControl))
                 return;
 
-            }
-            CorBotao(btnFuncionarios);
-            funcionarioControl = new Funcionario();
             AbrirTela(funcionarioControl);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            if (usuarioControl != null)
+            CorBotao(btnUsuarios);
+
+            if (usuarioControl == null)
             {
+                usuarioControl = new Usuario();
+            }
+
+
+            if (panelMolde.Controls.Contains(usuarioControl))
                 return;
 
-            }
-            CorBotao(btnUsuarios);
-            usuarioControl = new Usuario();
             AbrirTela(usuarioControl);
         }
 
         private void btnEmprestimo_Click(object sender, EventArgs e)
         {
-            if (emprestimoControl != null)
+            CorBotao(btnEmprestimo);
+
+            if (emprestimoControl == null)
             {
+                emprestimoControl = new ControlEmprestimo();
+            }
+
+
+            if (panelMolde.Controls.Contains(emprestimoControl))
                 return;
 
-            }
-            CorBotao(btnEmprestimo);
-            emprestimoControl = new ControlEmprestimo();
             AbrirTela(emprestimoControl);
+
         }
     }
 }

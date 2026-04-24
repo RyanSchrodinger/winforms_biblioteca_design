@@ -98,6 +98,7 @@ namespace winforms_biblioteca_design.Controls
             txtEmail.Text = usuario.Email;
             txtNome.Text = usuario.Nome;
             txtTelefone.Text = usuario.IsTelefoneNull() ? "" : usuario.Telefone;
+            txtDataCadastro.Text = usuario.DataCadastro.ToString("dd/MM/yyyy");
         }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
@@ -118,6 +119,26 @@ namespace winforms_biblioteca_design.Controls
             foreach (var usuario in usuarios) lboUsuarios.Items.Add(usuario);
         }
 
-      
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+            string email = txtEmail.Text;
+            string telefone = txtTelefone.Text;
+
+            try
+            {
+                UsuariosTableAdapter usuarios = new UsuariosTableAdapter();
+                usuarios.Insert(nome, email, telefone);
+                AtualizarLista();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar usuário: " + ex.Message);
+            }
+
+        }
+
+       
     }
 }

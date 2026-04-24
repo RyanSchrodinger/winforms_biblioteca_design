@@ -110,6 +110,9 @@
     <EmbeddedResource Include="Controls\Controles Emprestimos\Emprestimo.resx">
       <DependentUpon>Emprestimo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Funcionario.resx">
+      <DependentUpon>Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Livro.resx">
       <DependentUpon>Livro.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +211,8 @@
   <ItemGroup>
     <None Include="Resources\mais.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\mais1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

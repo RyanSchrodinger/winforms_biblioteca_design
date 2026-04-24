@@ -51,7 +51,7 @@ namespace winforms_biblioteca_design.Controls.Controles_Emprestimos
 
         private void textPesquisar_TextChanged(object sender, EventArgs e)
         {
-            if(txtPesquisar.Text == "")
+            if (txtPesquisar.Text == "")
             {
                 var dado = new RequisicoesTableAdapter();
                 lboConsulta.Items.AddRange(dado.GetData().ToArray());
@@ -64,6 +64,7 @@ namespace winforms_biblioteca_design.Controls.Controles_Emprestimos
             lboConsulta.Items.AddRange((from linha in requisicoes.GetData()
                                         where requisicoes.ToString().ToLower().Contains(txtPesquisar.Text)
                                         select linha).ToArray());
+        
 
 
 
