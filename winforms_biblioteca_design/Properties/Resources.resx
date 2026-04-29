@@ -124,11 +124,20 @@
   <data name="mais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="jaredd-craig-HH4WBGNyltc-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jaredd-craig-HH4WBGNyltc-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChatGPT Image 29 de abr. de 2026, 14_20_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image 29 de abr. de 2026, 14_20_43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="abra-o-livro (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abra-o-livro (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="biblioteca-on-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblioteca-on-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="livro-de-enderecos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\livro-de-enderecos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,23 +148,29 @@
   <data name="lupa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lupa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="livro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\livro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="abra-o-livro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abra-o-livro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="carteira-de-identidade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carteira-de-identidade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mais1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mais1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="opcao-de-salvar-arquivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\opcao-de-salvar-arquivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mulher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mulher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="biblioteca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vertical-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vertical-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="carteira-de-identidade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carteira-de-identidade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mulher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mulher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lapis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lapis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +181,8 @@
   <data name="abra-o-livro (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abra-o-livro (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="biblioteca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biblioteca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="abra-o-livro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abra-o-livro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="biblioteca-on-line (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblioteca-on-line (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +190,7 @@
   <data name="mulher 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mulher 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mais1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mais1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trancar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trancar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

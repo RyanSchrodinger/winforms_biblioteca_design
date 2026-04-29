@@ -14,9 +14,21 @@ namespace winforms_biblioteca_design
         [STAThread]
         static void Main()
         {
+            // ID - Funcionário
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Login entrando = new Login();
+            entrando.saida = false;
+            Application.Run(entrando);
+            if (entrando.saida)
+            {
+                entrando.Dispose();
+                entrando.Close();
+                Application.Run(new Form1());// Será necessário passar para os formulários             
+
+
+            }
         }
     }
 }

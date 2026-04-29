@@ -19,7 +19,7 @@ namespace winforms_biblioteca_design.Controls
         public ControlEmprestimo()
         {
             InitializeComponent();
-            ArredondarCadaElemento();
+            AtivarArredondamento();
         }
 
 
@@ -60,12 +60,11 @@ namespace winforms_biblioteca_design.Controls
 
         public void AtivarArredondamento()
         {
-            ArredondarControle(btnConsultar);
+            ArredondarControle(btnConsultar, 10);
 
 
 
         }
-        #endregion
 
 
 

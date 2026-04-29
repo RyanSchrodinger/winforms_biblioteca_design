@@ -36,10 +36,10 @@
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.tcEmprestimo = new MaterialSkin.Controls.MaterialTabControl();
             this.tpPrincipal = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.tpEmprestar = new System.Windows.Forms.TabPage();
             this.tpDevolver = new System.Windows.Forms.TabPage();
             this.tpConsultar = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tcEmprestimo.SuspendLayout();
@@ -178,6 +178,15 @@
             this.tpPrincipal.TabIndex = 0;
             this.tpPrincipal.Text = "Principal";
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(256, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(409, 61);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "BEM-VINDO A ÁREA DE EMPRÉSTIMOS";
+            // 
             // tpEmprestar
             // 
             this.tpEmprestar.Location = new System.Drawing.Point(4, 22);
@@ -206,15 +215,6 @@
             this.tpConsultar.TabIndex = 2;
             this.tpConsultar.Text = "Consultar";
             this.tpConsultar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BEM-VINDO A ÁREA DE EMPRÉSTIMOS";
             // 
             // ControlEmprestimo
             // 

@@ -213,4 +213,20 @@ GO
     END
 GO
 
-    select * from Usuarios
+    select * from Funcionarios
+
+
+GO
+    CREATE OR ALTER PROCEDURE verificarUsuario
+        @usuario NVARCHAR(50),
+        @senha VARCHAR(MAX)
+
+    AS
+    BEGIN
+        SELECT FuncionarioID 
+        FROM Funcionarios
+        WHERE SenhaHash = HASHBYTES('SHA2_256',@senha) AND NomeUsuario = @usuario
+    END
+
+
+    EXEC verificarUsuario 'mpereira', 'senha123!'
