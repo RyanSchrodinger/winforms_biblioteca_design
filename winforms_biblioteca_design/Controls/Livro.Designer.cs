@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNovoLivro = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelCadastrar = new System.Windows.Forms.Panel();
@@ -47,7 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,27 +64,24 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboLivros = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panelLivro = new System.Windows.Forms.Panel();
-            this.panelPesquisar = new System.Windows.Forms.Panel();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.btnNovoLivro = new System.Windows.Forms.Button();
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panelPesquisar = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,17 +100,17 @@
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel18.SuspendLayout();
             this.panelListBox.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
             this.panelLivro.SuspendLayout();
-            this.panelPesquisar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panelPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +126,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 574);
             this.panel2.TabIndex = 6;
+            // 
+            // btnNovoLivro
+            // 
+            this.btnNovoLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovoLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(247)))));
+            this.btnNovoLivro.FlatAppearance.BorderSize = 0;
+            this.btnNovoLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoLivro.Image = global::winforms_biblioteca_design.Properties.Resources.mais1;
+            this.btnNovoLivro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoLivro.Location = new System.Drawing.Point(802, 11);
+            this.btnNovoLivro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNovoLivro.Name = "btnNovoLivro";
+            this.btnNovoLivro.Size = new System.Drawing.Size(125, 35);
+            this.btnNovoLivro.TabIndex = 44;
+            this.btnNovoLivro.Text = "Novo Livro";
+            this.btnNovoLivro.UseVisualStyleBackColor = false;
+            this.btnNovoLivro.Click += new System.EventHandler(this.btnNovoLivro_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -392,6 +409,26 @@
             this.panel4.Size = new System.Drawing.Size(107, 51);
             this.panel4.TabIndex = 39;
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(170)))), ((int)(((byte)(94)))));
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Image = global::winforms_biblioteca_design.Properties.Resources.lapis;
+            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizar.Location = new System.Drawing.Point(3, 13);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(92, 35);
+            this.btnAtualizar.TabIndex = 38;
+            this.btnAtualizar.Text = "   Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // panel15
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -403,6 +440,26 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(106, 51);
             this.panel15.TabIndex = 40;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Image = global::winforms_biblioteca_design.Properties.Resources.excluir__1_;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(10, 14);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(94, 35);
+            this.btnExcluir.TabIndex = 23;
+            this.btnExcluir.Text = "  Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // panel8
             // 
@@ -569,6 +626,21 @@
             this.panel19.Size = new System.Drawing.Size(155, 187);
             this.panel19.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.pictureBox1.Image = global::winforms_biblioteca_design.Properties.Resources.livro_de_enderecos;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel17
             // 
             this.panel17.Controls.Add(this.label1);
@@ -589,6 +661,17 @@
             this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cadastro de Livro";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(17, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // panel18
             // 
@@ -652,6 +735,17 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Lista de Livros";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
+            this.pictureBox4.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(17, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label11);
@@ -696,6 +790,17 @@
             this.panelLivro.Size = new System.Drawing.Size(48, 44);
             this.panelLivro.TabIndex = 43;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::winforms_biblioteca_design.Properties.Resources.livro;
+            this.pictureBox6.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(34, 27);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
             // panelPesquisar
             // 
             this.panelPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -709,6 +814,18 @@
             this.panelPesquisar.Name = "panelPesquisar";
             this.panelPesquisar.Size = new System.Drawing.Size(338, 35);
             this.panelPesquisar.TabIndex = 8;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::winforms_biblioteca_design.Properties.Resources.lupa__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // txtPesquisar
             // 
@@ -724,124 +841,6 @@
             this.txtPesquisar.Size = new System.Drawing.Size(272, 25);
             this.txtPesquisar.TabIndex = 0;
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
-            // 
-            // btnNovoLivro
-            // 
-            this.btnNovoLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovoLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(247)))));
-            this.btnNovoLivro.FlatAppearance.BorderSize = 0;
-            this.btnNovoLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoLivro.Image = global::winforms_biblioteca_design.Properties.Resources.mais1;
-            this.btnNovoLivro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovoLivro.Location = new System.Drawing.Point(802, 11);
-            this.btnNovoLivro.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNovoLivro.Name = "btnNovoLivro";
-            this.btnNovoLivro.Size = new System.Drawing.Size(125, 35);
-            this.btnNovoLivro.TabIndex = 44;
-            this.btnNovoLivro.Text = "Novo Livro";
-            this.btnNovoLivro.UseVisualStyleBackColor = false;
-            this.btnNovoLivro.Click += new System.EventHandler(this.btnNovoLivro_Click);
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(170)))), ((int)(((byte)(94)))));
-            this.btnAtualizar.FlatAppearance.BorderSize = 0;
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
-            this.btnAtualizar.Image = global::winforms_biblioteca_design.Properties.Resources.lapis;
-            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.Location = new System.Drawing.Point(3, 13);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(92, 35);
-            this.btnAtualizar.TabIndex = 38;
-            this.btnAtualizar.Text = "   Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Image = global::winforms_biblioteca_design.Properties.Resources.excluir__1_;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(10, 14);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(94, 35);
-            this.btnExcluir.TabIndex = 23;
-            this.btnExcluir.Text = "  Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
-            this.pictureBox1.Image = global::winforms_biblioteca_design.Properties.Resources.livro_de_enderecos;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::winforms_biblioteca_design.Properties.Resources.vertical_bar;
-            this.pictureBox4.Location = new System.Drawing.Point(2, 7);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(17, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::winforms_biblioteca_design.Properties.Resources.livro;
-            this.pictureBox6.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(34, 27);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::winforms_biblioteca_design.Properties.Resources.lupa__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // Livro
             // 
@@ -877,21 +876,21 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panelListBox.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panelLivro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panelPesquisar.ResumeLayout(false);
             this.panelPesquisar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 

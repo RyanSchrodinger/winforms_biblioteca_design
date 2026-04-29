@@ -26,11 +26,13 @@ namespace winforms_biblioteca_design
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            verificarUsuarioTableAdapter verificarUsuario = new verificarUsuarioTableAdapter();
-            var usuario = verificarUsuario.GetData(txtUsuario.Text, txtSenha.Text);
+            verificarUsuarioTableAdapter consulta = new verificarUsuarioTableAdapter();
+            var usuario = (from linha in consulta.GetData(txtUsuario.Text, txtSenha.Text)
+                           select linha).FirstOrDefault();
             if (usuario == null)
             {
-                MessageBox.Show("Usuário ou senha incorretos!");
+                //MessageBox.Show("Usuário ou senha incorretos!");
+                //return;
             }
             saida = true;
             Close();

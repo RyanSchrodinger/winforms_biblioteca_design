@@ -213,7 +213,7 @@ GO
     END
 GO
 
-    select * from Funcionarios
+    select * from Livros
 
 
 GO
@@ -229,4 +229,42 @@ GO
     END
 
 
-    EXEC verificarUsuario 'mpereira', 'senha123!'
+    EXEC verificarUsuario 'mpereira', 'Senha123!'
+
+
+-- DELETE IN CASCADE
+GO
+    CREATE OR ALTER PROCEDURE DeletarLivro
+        @ID INT
+    AS 
+    BEGIN
+        SET NOCOUNT ON
+        BEGIN TRANSACTION 
+            DELETE FROM Requisicoes
+            WHERE LivroID = @ID
+            DELETE FROM Livros 
+            WHERE LivroID = @ID
+        COMMIT 
+    END 
+    EXEC DeletarLivro 22
+
+-- TRIGGER 
+GO
+    CREATE OR ALTER TRIGGER devolucao
+        ON Requisicoes
+        AFTER INSERT, UPDATE 
+    AS
+    BEGIN 
+        SET NOCOUNT ON
+        UPDATE Tabela 
+        SET  Status = 'Devolvido'
+        FROM Requisicoes Tabela 
+        WHERE Tabela.DataDevolucao IS NULL 
+
+    END
+GO
+
+SELECT * FROM Requisicoes
+
+select * from Livros
+EXEC DeletarLivro
