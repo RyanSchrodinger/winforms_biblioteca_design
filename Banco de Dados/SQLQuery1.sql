@@ -267,4 +267,7 @@ GO
 SELECT * FROM Requisicoes
 
 select * from Livros
-EXEC DeletarLivro
+EXEC DeletarLivro 10
+
+
+DROP TRIGGER devolucao
