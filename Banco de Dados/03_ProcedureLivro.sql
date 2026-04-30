@@ -39,9 +39,8 @@ GO
 
 -- PROCEDURE Deletar Livro
 GO
-    CREATE   PROCEDURE DeletarLivro
+    CREATE OR ALTER PROCEDURE DeletarLivro
         @ID INT
-
     AS 
     BEGIN
         SET NOCOUNT ON

@@ -2,14 +2,14 @@ USE BibliotecaDB
 
 -- PROCEDURE Obter Emprestimos 
 
-  GO
-        CREATE PROCEDURE ObterEmprestimos
-        AS
-        BEGIN
-            SELECT * FROM Requisicoes
-        END
+GO
+    CREATE PROCEDURE ObterEmprestimos
+    AS
+    BEGIN
+        SELECT * FROM Requisicoes
+    END
 
-   GO
+GO
 
 -- PROCEDURE Emprestar Livro
 
