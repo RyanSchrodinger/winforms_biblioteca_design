@@ -225,12 +225,6 @@ USE BibliotecaDB
         --END
     GO
 
-UPDATE Livros
-SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
-WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
-
-INSERT INTO Requisicoes (...)
-VALUES (...)
 
 
 EXEC EmprestarLivro 20, 1,12 
