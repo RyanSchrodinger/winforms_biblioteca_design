@@ -25,9 +25,13 @@ CREATE TABLE Funcionarios (
     DataCadastro DATETIME DEFAULT GETDATE(),
     UltimoLogin DATETIME NULL,
     Ativo BIT DEFAULT 1
+
 )
 GO
+ALTER TABLE Funcionarios
+ALTER COLUMN SenhaHash VARBINARY(32);
 
+SELECT * FROM Requisicoes
 -- Tabela de Requisições
 CREATE TABLE Requisicoes (
     RequisicaoID INT IDENTITY(1,1) PRIMARY KEY,
@@ -166,18 +170,67 @@ USE BibliotecaDB
         END
 
     GO
-        ALTER PROCEDURE EmprestarLivro
-            @LivroIDEmprestado INT,
-            @FuncinarioIDEmprestado INT,
-            @UsuarioIDEmprestado INT
-        AS
-        BEGIN
-            UPDATE Livros SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
-            WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
+    
+    CREATE OR ALTER PROCEDURE EmprestarLivro
+        @LivroIDEmprestado INT,
+        @FuncinarioIDEmprestado INT,
+        @UsuarioIDEmprestado INT
+    AS
+    BEGIN
+        SET NOCOUNT ON;
 
-            INSERT INTO Requisicoes(UsuarioID, LivroID, FuncionarioID, DataDevolucao,Status)
-            VALUES(@UsuarioIDEmprestado,@LivroIDEmprestado,@FuncinarioIDEmprestado, DATEADD(DAY,7,GETDATE()),'Aprovada')
-        END
+            IF EXISTS (
+                SELECT 1 
+                FROM Livros 
+                WHERE LivroID = @LivroIDEmprestado 
+                  AND QuantidadeDisponivel > 0
+            )
+            BEGIN
+            UPDATE Livros
+            SET QuantidadeDisponivel = QuantidadeDisponivel - 1
+            WHERE LivroID = @LivroIDEmprestado;
+
+            
+            INSERT INTO Requisicoes
+                (UsuarioID, LivroID, FuncionarioID, DataDevolucao, Status)
+            VALUES
+                (@UsuarioIDEmprestado, @LivroIDEmprestado, @FuncinarioIDEmprestado,
+                DATEADD(DAY, 7, GETDATE()), 'Aprovada');
+            END
+            ELSE
+            BEGIN
+                    RAISERROR('Livro indisponível ou inexistente.', 16, 1);
+            END
+    END
+
+        --ALTER PROCEDURE EmprestarLivro
+        --    @LivroIDEmprestado INT,
+        --    @FuncinarioIDEmprestado INT,
+        --    @UsuarioIDEmprestado INT
+        --AS
+        --BEGIN
+
+        --UPDATE Livros
+        --SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
+        --WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
+
+        --INSERT INTO Requisicoes (...)
+        --VALUES (...)
+
+        --    UPDATE Livros SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
+        --    WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
+
+        --    INSERT INTO Requisicoes(UsuarioID, LivroID, FuncionarioID, DataDevolucao,Status)
+        --    VALUES(@UsuarioIDEmprestado,@LivroIDEmprestado,@FuncinarioIDEmprestado, DATEADD(DAY,7,GETDATE()),'Aprovada')
+        --END
+    GO
+
+UPDATE Livros
+SET QuantidadeDisponivel = QuantidadeDisponivel - 1 
+WHERE LivroID = @LivroIDEmprestado AND QuantidadeDisponivel > 0;
+
+INSERT INTO Requisicoes (...)
+VALUES (...)
 
 
 EXEC EmprestarLivro 20, 1,12 
@@ -249,20 +302,43 @@ GO
     EXEC DeletarLivro 22
 
 -- TRIGGER 
-GO
-    CREATE OR ALTER TRIGGER devolucao
-        ON Requisicoes
-        AFTER INSERT, UPDATE 
-    AS
-    BEGIN 
-        SET NOCOUNT ON
-        UPDATE Tabela 
-        SET  Status = 'Devolvido'
-        FROM Requisicoes Tabela 
-        WHERE Tabela.DataDevolucao IS NULL 
 
-    END
+
+
+CREATE OR ALTER TRIGGER devolucao
+ON Requisicoes
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE R
+    SET Status = 'Devolvido'
+    FROM Requisicoes R
+    INNER JOIN inserted I ON R.RequisicaoID = I.RequisicaoID
+    WHERE I.DataDevolucao IS NOT NULL
+      AND R.Status <> 'Devolvido';
+END
 GO
+
+
+
+
+
+--GO
+--    CREATE OR ALTER TRIGGER devolucao
+--        ON Requisicoes
+--        AFTER INSERT, UPDATE 
+--    AS
+--    BEGIN 
+--        SET NOCOUNT ON
+--        UPDATE Tabela 
+--        SET  Status = 'Devolvido'
+--        FROM Requisicoes Tabela 
+--        WHERE Tabela.DataDevolucao IS NULL 
+
+--    END
+--GO
 
 SELECT * FROM Requisicoes
 

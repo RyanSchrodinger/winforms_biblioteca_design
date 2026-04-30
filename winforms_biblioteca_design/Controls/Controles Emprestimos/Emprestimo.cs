@@ -70,13 +70,33 @@ namespace winforms_biblioteca_design.Controls
                 MessageBox.Show("Selecione um livro, um usuário e um funcionário para realizar o empréstimo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            QueriesTableAdapter consulta = new QueriesTableAdapter();
-            consulta.EmprestarLivro(
-                livroSelecionado.LivroID,
-                funcionarioSelecionado.FuncionarioID, 
-                usuarioSelecionado.UsuarioID
+
+            try
+            {
+                QueriesTableAdapter consulta = new QueriesTableAdapter();
+                consulta.EmprestarLivro(
+                    livroSelecionado.LivroID,
+                    funcionarioSelecionado.FuncionarioID,
+                    usuarioSelecionado.UsuarioID
+                    );
+                MessageBox.Show(
+                    $"Empréstimo realizado com sucesso!\n\n" +
+                    $"Livro: {livroSelecionado.Titulo}\n" +
+                    $"Usuário: {usuarioSelecionado.Nome}\n" +
+                    $"Funcionário: {funcionarioSelecionado.NomeCompleto}\n" +
+                    $"Data de devolução: {DateTime.Now.AddDays(7):dd/MM/yyyy}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Erro ao realizar empréstimo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
                 );
-            MessageBox.Show($"Empréstimo realizado com sucesso!\n\nLivro: {livroSelecionado.Titulo}\nUsuário: {usuarioSelecionado.Nome}\nFuncionário: {funcionarioSelecionado.NomeCompleto}\nData de devolução: {DateTime.Now.AddDays(7):dd/MM/yyyy}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
     }
 }
