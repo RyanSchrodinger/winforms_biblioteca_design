@@ -67,10 +67,20 @@ namespace winforms_biblioteca_design.Controls
             
         }
         #endregion
-    
 
 
-       
+
+
+        public void LimparCampos() 
+        {
+            txtAnoPublicacao.Clear();
+            txtAutor.Clear();
+            txtEditora.Clear();
+            txtGenero.Clear();
+            txtISBN.Clear();
+            txtQuantidade.Clear();
+            txtTitulo.Clear();
+        }
 
         public void AtualizarLista()
         {
@@ -126,13 +136,7 @@ namespace winforms_biblioteca_design.Controls
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtAnoPublicacao.Clear();
-            txtAutor.Clear();
-            txtEditora.Clear();
-            txtGenero.Clear();  
-            txtISBN.Clear();
-            txtQuantidade.Clear();  
-            txtTitulo.Clear();
+            LimparCampos();
         }
 
        
@@ -181,6 +185,7 @@ namespace winforms_biblioteca_design.Controls
             var livros = new LivrosTableAdapter();
             livros.Delete(livro.LivroID);
             AtualizarLista();
+            LimparCampos();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

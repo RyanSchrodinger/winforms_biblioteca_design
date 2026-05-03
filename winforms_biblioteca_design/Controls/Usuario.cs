@@ -83,6 +83,14 @@ namespace winforms_biblioteca_design.Controls
             foreach (UsuariosRow dado in dados) lboUsuarios.Items.Add(dado);
         }
 
+        public void LimparCampos()
+        {
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtTelefone.Clear();
+            txtDataCadastro.Clear();
+        }
+
 
         #endregion
 
@@ -157,6 +165,7 @@ namespace winforms_biblioteca_design.Controls
             var usuarios = new UsuariosTableAdapter();
             usuarios.Delete(usuario.UsuarioID);
             AtualizarLista();
+            LimparCampos();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -188,6 +197,11 @@ namespace winforms_biblioteca_design.Controls
             {
                 MessageBox.Show("Erro ao atualizar usuário: " + ex.Message);
             }
-        } 
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
     }
 }

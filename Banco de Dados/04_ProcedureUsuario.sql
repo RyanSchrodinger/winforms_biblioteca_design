@@ -13,13 +13,18 @@ GO
 -- PROCEDURE Deletar Usuarios
 
 GO
-CREATE PROCEDURE DeletarUsuario
-@IdExcluido INT
-AS 
-BEGIN 
-	DELETE FROM Usuarios
-	WHERE UsuarioID = @IdExcluido
-END
+    CREATE OR ALTER PROCEDURE DeletarLivro
+        @ID INT
+    AS 
+    BEGIN
+        SET NOCOUNT ON
+        BEGIN TRANSACTION 
+            DELETE FROM Requisicoes
+            WHERE UsuarioID = @ID
+            DELETE FROM Usuarios 
+            WHERE UsuarioID = @ID
+        COMMIT 
+    END 
 GO
 
 -- PROCEDURE Inserir Usuario

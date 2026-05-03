@@ -93,14 +93,17 @@ VALUES
 ('poliveira', HASHBYTES('SHA2_256', 'Senha123!'), 'Patricia Oliveira', 'Marketing', 'patricia.oliveira@empresa.com', GETDATE(), NULL, 0),
 ('jrodrigues', HASHBYTES('SHA2_256', 'Senha123!'), 'José Rodrigues', 'Vendas', 'jose.rodrigues@empresa.com', GETDATE(), NULL, 0),
 ('msilva', HASHBYTES('SHA2_256', 'Senha123!'), 'Mariana Silva', 'Desenvolvedora Frontend', 'mariana.silva@empresa.com', GETDATE(), NULL, 1)
+select * from Usuarios
+select * from Livros
+select * from Funcionarios
 
 INSERT INTO Requisicoes (UsuarioID, LivroID, FuncionarioID, Status)
 VALUES
-(1, 1, 1, 'Aprovada'),
-(2, 3, 2, 'Pendente'),
+(1, 10, 1, 'Aprovada'),
+(2, 30, 2, 'Pendente'),
 (3, 5, 3, 'Devolvido'),
-(4, 2, 4, 'Aprovada'),
-(5, 4, 5, 'Devolvido'),
+(4, 20, 4, 'Aprovada'),
+(5, 40, 5, 'Devolvido'),
 (6, 7, 6, 'Pendente'),
 (7, 6, 7, 'Aprovada'),
 (8, 9, 8, 'Devolvido'),
