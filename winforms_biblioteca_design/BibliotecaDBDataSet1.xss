@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:Usuarios" ZOrder="9" X="390" Y="779" Height="204" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="145" />
     <Shape ID="DesignTable:Livros" ZOrder="6" X="1087" Y="70" Height="273" Width="208" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
     <Shape ID="DesignTable:verificarUsuario" ZOrder="2" X="1334" Y="68" Height="112" Width="280" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="3" X="717" Y="69" Height="28" Width="300" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="45" SplitterPosition="24" />
+    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="3" X="717" Y="69" Height="125" Width="300" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="45" SplitterPosition="24" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK__Requisico__Funci__6B24EA82" ZOrder="8" LineWidth="11">

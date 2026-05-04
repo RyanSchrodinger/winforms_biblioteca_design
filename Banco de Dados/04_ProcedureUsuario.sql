@@ -61,3 +61,5 @@ GO
     END
 GO
 
+
+ SELECT*FROM Funcionarios

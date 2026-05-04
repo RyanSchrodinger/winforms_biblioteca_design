@@ -32,15 +32,16 @@ GO
 -- PROCEDURE Inserir Funcionários
 
 GO
-    CREATE PROCEDURE InserirFuncionario
+    CREATE OR ALTER PROCEDURE InserirFuncionario
     @NomeUsuario VARCHAR(100),
     @SenhaHash VARCHAR(100),
     @NomeCompleto VARCHAR(100),
-    @Cargo VARCHAR (100)
+    @Cargo VARCHAR (100),
+    @Email VARCHAR(100)
     AS
     BEGIN
-        INSERT INTO Funcionarios(NomeCompleto, NomeUsuario, SenhaHash, Cargo)
-        VALUES (@NomeCompleto,@NomeUsuario,@SenhaHash,@Cargo)
+        INSERT INTO Funcionarios(NomeCompleto, NomeUsuario, SenhaHash, Cargo, Email)
+        VALUES (@NomeCompleto,@NomeUsuario,@SenhaHash,@Cargo, @Email)
     END
 GO
  

@@ -110,5 +110,42 @@ namespace winforms_biblioteca_design.Controls
             txtCargo.Text = funcionario.Cargo;
             txtEmail.Text = funcionario.Email;
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(lboFuncionarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um funcionário para excluir.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            FuncionariosRow funcionario = lboFuncionarios.SelectedItem as FuncionariosRow;
+            if (funcionario == null) return;
+            FuncionariosTableAdapter funcionarios = new FuncionariosTableAdapter();
+            funcionarios.Delete(funcionario.FuncionarioID);
+
+            AtualizarLista();
+            LimparCampos();
+        }
+
+        private void btnNovoFuncionario_Click(object sender, EventArgs e)
+        {
+            string nomeCompleto = txtNome.Text;
+            string nomeUsuario = txtNomeUser.Text;
+            string cargo = txtCargo.Text;
+            string email = txtEmail.Text;
+            string senha = txtSenha.Text;
+            try
+            {
+                var funcionarios = new FuncionariosTableAdapter();
+                funcionarios.Insert(nomeUsuario, senha, nomeCompleto, cargo, email);
+                AtualizarLista();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
     }
 }

@@ -268,6 +268,7 @@
             this.btnExcluir.TabIndex = 23;
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // panel2
             // 
@@ -737,6 +738,7 @@
             this.btnNovoFuncionario.TabIndex = 48;
             this.btnNovoFuncionario.Text = "Novo Funcionário";
             this.btnNovoFuncionario.UseVisualStyleBackColor = false;
+            this.btnNovoFuncionario.Click += new System.EventHandler(this.btnNovoFuncionario_Click);
             // 
             // panel4
             // 
