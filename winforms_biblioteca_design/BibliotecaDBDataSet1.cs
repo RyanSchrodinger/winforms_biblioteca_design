@@ -9,13 +9,11 @@ namespace winforms_biblioteca_design
 
     partial class BibliotecaDBDataSet
     {
-        partial class UsuariosDataTable
-        {
-        }
 
-        partial class RequisicoesDataTable
-        {
-        }
+
+
+
+
 
         partial class FuncionariosRow
         {
@@ -72,9 +70,3 @@ namespace winforms_biblioteca_design
     }
 }
 
-namespace winforms_biblioteca_design.BibliotecaDBDataSetTableAdapters {
-    
-    
-    public partial class RequisicoesTableAdapter {
-    }
-}

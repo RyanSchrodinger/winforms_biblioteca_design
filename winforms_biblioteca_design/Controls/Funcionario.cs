@@ -98,5 +98,17 @@ namespace winforms_biblioteca_design.Controls
 
 
         #endregion
+
+        private void lboFuncionarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lboFuncionarios.SelectedItem == null) return;
+            FuncionariosRow funcionario = lboFuncionarios.SelectedItem as FuncionariosRow;
+            if (funcionario == null) return;
+            txtNome.Text = funcionario.NomeCompleto;
+            txtNomeUser.Text = funcionario.NomeUsuario;
+            txtDataCadastro.Text = funcionario.DataCadastro.ToString("dd/MM/yyyy");
+            txtCargo.Text = funcionario.Cargo;
+            txtEmail.Text = funcionario.Email;
+        }
     }
 }
