@@ -19,6 +19,7 @@ namespace winforms_biblioteca_design.Controls
         {
             InitializeComponent();
             AtualizarLista();
+            AtivarArredondamento();
         }
 
 
@@ -173,11 +174,30 @@ namespace winforms_biblioteca_design.Controls
                 var funcionarios = new FuncionariosTableAdapter();
                 funcionarios.Update(funcionario.FuncionarioID,funcionario.NomeUsuario,funcionario.NomeCompleto,funcionario.Cargo);
                 AtualizarLista();
+                LimparCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            TextBox pesquisa = sender as TextBox;
+            if (pesquisa.Text == "")
+            {
+                AtualizarLista();
+                return;
+            }
+            lboFuncionarios.ClearSelected();
+            lboFuncionarios.Items.Clear();
+            string textoDigitado = txtPesquisar.Text;
+            FuncionariosTableAdapter dados = new FuncionariosTableAdapter();
+            var funcionarios = from linha in dados.GetData()
+                               where linha.NomeCompleto.ToLower().Contains(textoDigitado.ToLower())
+                               select linha;
+            foreach (var funcionario in funcionarios) lboFuncionarios.Items.Add(funcionario);
         }
     }
 }

@@ -221,6 +221,7 @@ namespace winforms_biblioteca_design.Controls
                 var livros = new LivrosTableAdapter();
                 livros.Update(livro.LivroID, livro.Titulo, livro.Genero, livro.Autor, livro.Editora, livro.ISBN, livro.QuantidadeDisponivel);
                 AtualizarLista();
+                LimparCampos();
             }
             catch (FormatException)
             {

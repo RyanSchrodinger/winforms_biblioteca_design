@@ -19,87 +19,34 @@ namespace winforms_biblioteca_design.Controls
         public ControlEmprestimo()
         {
             InitializeComponent();
-            AtivarArredondamento();
         }
 
-
-        #region ARREDONDAMENTO DE CONTROLES
-
-
-        public void ArredondarControle(Control ctrl, int raio)
+        private void AbrirTela(Control tela)
         {
-            if (ctrl.Width <= 0 || ctrl.Height <= 0)
-                return;
+            panelMolde.Controls.Clear();
 
-            GraphicsPath path = new GraphicsPath();
-
-            path.StartFigure();
-
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(ctrl.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(ctrl.Width - raio, ctrl.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, ctrl.Height - raio, raio, raio, 90, 90);
-
-            path.CloseFigure();
-
-            ctrl.Region = new Region(path);
+            tela.Dock = DockStyle.Fill;
+            panelMolde.Controls.Add(tela);
         }
 
-
-        public void AtivarArredondamentoControle(Control ctrl, int raio)
-        {
-            ctrl.Resize += (s, e) =>
-            {
-                ArredondarControle(ctrl, raio);
-            };
-
-
-            ArredondarControle(ctrl, raio);
-        }
-
-
-        public void AtivarArredondamento()
-        {
-            ArredondarControle(btnConsultar, 10);
-
-
-
-        }
 
 
 
 
         public void CorBotao(Button botao)
         {
-            
+
             btnConsultar.BackColor = Color.FromArgb(15, 29, 57);
             btnDevolver.BackColor = Color.FromArgb(15, 29, 57);
             btnEmprestar.BackColor = Color.FromArgb(15, 29, 57);
 
-            botao.BackColor = Color.FromArgb(42, 75, 148);
-           
+            botao.BackColor = Color.FromArgb(50, 170, 94);
+
         }
 
-
-        #endregion
-
-        
-        
        
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            if (consulta != null)
-            {
-                return;
-            }
-            consulta = new Consulta();
-            consulta.Dock = DockStyle.Fill;
-            tcEmprestimo.SelectTab(tpConsultar);
-            tpConsultar.Controls.Add(consulta);
-        }
-
-        private void btnEmprestar_Click(object sender, EventArgs e)
+       /* private void btnEmprestar_Click(object sender, EventArgs e)
         {
             if (emprestimo != null)
             {
@@ -109,6 +56,39 @@ namespace winforms_biblioteca_design.Controls
             emprestimo.Dock = DockStyle.Fill;
             tcEmprestimo.SelectTab(tpEmprestar);
             tpEmprestar.Controls.Add(emprestimo);
+        }*/
+
+        private void btnnsultar_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnConsultar);
+
+            if (consulta == null)
+            {
+                consulta = new Consulta();
+            }
+
+
+            if (panelMolde.Controls.Contains(consulta))
+                return;
+
+            AbrirTela(consulta);
+        }
+
+        private void btnEmprestar_Click(object sender, EventArgs e)
+        {
+
+            CorBotao(btnEmprestar);
+
+            if (emprestimo == null)
+            {
+                emprestimo = new Emprestimo();
+            }
+
+
+            if (panelMolde.Controls.Contains(emprestimo))
+                return;
+
+            AbrirTela(emprestimo);
         }
     }
 }

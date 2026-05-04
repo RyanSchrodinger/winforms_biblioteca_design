@@ -131,26 +131,7 @@ namespace winforms_biblioteca_design.Controls
 
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            if (lboUsuarios.SelectedItem == null)
-            {
-                MessageBox.Show("Selecione um usuário para excluir.");
-                return;
-            }
-
-            UsuariosRow usuario = lboUsuarios.SelectedItem as UsuariosRow;
-            if (usuario == null)
-            {
-                MessageBox.Show("Seleção inválida.");
-                return;
-            }
-
-            var usuarios = new UsuariosTableAdapter();
-            usuarios.Delete(usuario.UsuarioID);
-            AtualizarLista();
-            LimparCampos();
-        }
+       
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
@@ -176,6 +157,7 @@ namespace winforms_biblioteca_design.Controls
                 var usuarios = new UsuariosTableAdapter();
                 usuarios.Update(usuario.UsuarioID, usuario.Nome, usuario.Email, usuario.Telefone);
                 AtualizarLista();
+                LimparCampos();
             }
             catch (Exception ex)
             {
@@ -205,6 +187,27 @@ namespace winforms_biblioteca_design.Controls
                            select linha;
             foreach (var usuario in usuarios) lboUsuarios.Items.Add(usuario);
 
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (lboUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+                return;
+            }
+
+            UsuariosRow usuario = lboUsuarios.SelectedItem as UsuariosRow;
+            if (usuario == null)
+            {
+                MessageBox.Show("Seleção inválida.");
+                return;
+            }
+
+            var usuarios = new UsuariosTableAdapter();
+            usuarios.Delete(usuario.UsuarioID);
+            AtualizarLista();
+            LimparCampos();
         }
     }
 }
