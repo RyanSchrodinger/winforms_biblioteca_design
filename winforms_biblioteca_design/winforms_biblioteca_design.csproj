@@ -286,6 +286,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\equipe.png" />
+    <None Include="Resources\carteira-de-identidade1.png" />
     <Content Include="user-_3_.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,6 +9,10 @@ namespace winforms_biblioteca_design
 
     partial class BibliotecaDBDataSet
     {
+        partial class UsuariosDataTable
+        {
+        }
+
         partial class RequisicoesDataTable
         {
         }
@@ -17,7 +21,7 @@ namespace winforms_biblioteca_design
         {
             public override string ToString()
             {
-                return this.FuncionarioID + " - " + this.NomeCompleto;
+                return this.FuncionarioID + " - " + this.NomeCompleto + " - " + this.Cargo;
             }
         }
 

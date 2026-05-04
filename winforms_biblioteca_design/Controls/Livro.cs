@@ -62,9 +62,16 @@ namespace winforms_biblioteca_design.Controls
         
         public void AtivarArredondamento()
         {
-          
+            AtivarArredondamentoControle(panelCadastrar, 20);
+            AtivarArredondamentoControle(panelListBox, 20);
+            AtivarArredondamentoControle(panelPesquisar, 10);
 
-            
+            AtivarArredondamentoControle(btnNovoLivro, 10);
+            AtivarArredondamentoControle(btnExcluir, 10);
+            AtivarArredondamentoControle(btnAtualizar, 10);
+
+
+
         }
         #endregion
 
