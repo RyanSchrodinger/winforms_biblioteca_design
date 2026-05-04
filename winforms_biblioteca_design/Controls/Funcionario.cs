@@ -120,9 +120,15 @@ namespace winforms_biblioteca_design.Controls
             }
             FuncionariosRow funcionario = lboFuncionarios.SelectedItem as FuncionariosRow;
             if (funcionario == null) return;
-            FuncionariosTableAdapter funcionarios = new FuncionariosTableAdapter();
-            funcionarios.Delete(funcionario.FuncionarioID);
-
+            try
+            {
+                FuncionariosTableAdapter funcionarios = new FuncionariosTableAdapter();
+                funcionarios.Delete(funcionario.FuncionarioID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             AtualizarLista();
             LimparCampos();
         }
@@ -145,6 +151,32 @@ namespace winforms_biblioteca_design.Controls
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if(lboFuncionarios.SelectedItem == null) 
+            {
+                MessageBox.Show("Selecione um funcionário para atualizar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            FuncionariosRow funcionario = lboFuncionarios.SelectedItem as FuncionariosRow;
+            if (funcionario == null) return;
+
+            funcionario.NomeCompleto = txtNome.Text;
+            funcionario.NomeUsuario = txtNomeUser.Text;
+            funcionario.Cargo = txtCargo.Text;
+
+            try
+            {
+                var funcionarios = new FuncionariosTableAdapter();
+                funcionarios.Update(funcionario.FuncionarioID,funcionario.NomeUsuario,funcionario.NomeCompleto,funcionario.Cargo);
+                AtualizarLista();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
