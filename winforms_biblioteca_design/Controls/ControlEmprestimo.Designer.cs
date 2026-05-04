@@ -50,12 +50,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelMolde, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.14983F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.85017F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1269, 706);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(952, 574);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -71,12 +70,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnConsultar, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEmprestar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDevolver, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1261, 70);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(946, 57);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnSelecionar
@@ -89,10 +87,10 @@
             this.btnSelecionar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelecionar.ForeColor = System.Drawing.Color.White;
             this.btnSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelecionar.Location = new System.Drawing.Point(3, 2);
-            this.btnSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSelecionar.Location = new System.Drawing.Point(2, 2);
+            this.btnSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(309, 58);
+            this.btnSelecionar.Size = new System.Drawing.Size(232, 47);
             this.btnSelecionar.TabIndex = 40;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
@@ -107,14 +105,14 @@
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(947, 2);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultar.Location = new System.Drawing.Point(710, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(311, 58);
+            this.btnConsultar.Size = new System.Drawing.Size(234, 47);
             this.btnConsultar.TabIndex = 43;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnnsultar_Click);
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnEmprestar
             // 
@@ -126,10 +124,10 @@
             this.btnEmprestar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmprestar.ForeColor = System.Drawing.Color.White;
             this.btnEmprestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmprestar.Location = new System.Drawing.Point(318, 2);
-            this.btnEmprestar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmprestar.Location = new System.Drawing.Point(238, 2);
+            this.btnEmprestar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmprestar.Name = "btnEmprestar";
-            this.btnEmprestar.Size = new System.Drawing.Size(326, 58);
+            this.btnEmprestar.Size = new System.Drawing.Size(245, 47);
             this.btnEmprestar.TabIndex = 41;
             this.btnEmprestar.Text = "Emprestar";
             this.btnEmprestar.UseVisualStyleBackColor = false;
@@ -145,33 +143,34 @@
             this.btnDevolver.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolver.ForeColor = System.Drawing.Color.White;
             this.btnDevolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDevolver.Location = new System.Drawing.Point(650, 2);
-            this.btnDevolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDevolver.Location = new System.Drawing.Point(487, 2);
+            this.btnDevolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnDevolver.Name = "btnDevolver";
-            this.btnDevolver.Size = new System.Drawing.Size(291, 58);
+            this.btnDevolver.Size = new System.Drawing.Size(219, 47);
             this.btnDevolver.TabIndex = 42;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = false;
+            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
             // panelMolde
             // 
             this.panelMolde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMolde.Location = new System.Drawing.Point(3, 81);
+            this.panelMolde.Location = new System.Drawing.Point(2, 66);
+            this.panelMolde.Margin = new System.Windows.Forms.Padding(2);
             this.panelMolde.Name = "panelMolde";
-            this.panelMolde.Size = new System.Drawing.Size(1263, 622);
+            this.panelMolde.Size = new System.Drawing.Size(948, 506);
             this.panelMolde.TabIndex = 1;
             // 
             // ControlEmprestimo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(29)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ControlEmprestimo";
-            this.Size = new System.Drawing.Size(1269, 706);
+            this.Size = new System.Drawing.Size(952, 574);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);

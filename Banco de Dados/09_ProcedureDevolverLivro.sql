@@ -16,7 +16,7 @@ BEGIN
 
     -- Atualiza estoque do livro
     UPDATE Livros
-    SET Quantidade = Quantidade + 1
+    SET QuantidadeDisponivel = QuantidadeDisponivel + 1
     WHERE LivroID = (
         SELECT LivroID 
         FROM Requisicoes 

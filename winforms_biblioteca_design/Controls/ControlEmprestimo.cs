@@ -23,10 +23,11 @@ namespace winforms_biblioteca_design.Controls
 
         private void AbrirTela(Control tela)
         {
-            panelMolde.Controls.Clear();
+            panelMolde.Controls.Clear(); // remove da tela (mas não destrói)
 
             tela.Dock = DockStyle.Fill;
             panelMolde.Controls.Add(tela);
+            tela.BringToFront();
         }
 
 
@@ -58,37 +59,39 @@ namespace winforms_biblioteca_design.Controls
             tpEmprestar.Controls.Add(emprestimo);
         }*/
 
-        private void btnnsultar_Click(object sender, EventArgs e)
+        
+
+        private void btnEmprestar_Click(object sender, EventArgs e)
+        {
+            CorBotao(btnEmprestar);
+            if (emprestimo == null)
+                emprestimo = new Emprestimo();
+
+            AbrirTela(emprestimo);
+                emprestimo.CarregarListBoxLivros();
+                emprestimo.CarregarListBoxUsuarios();
+                emprestimo.ResetarTela();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
             CorBotao(btnConsultar);
 
             if (consulta == null)
-            {
                 consulta = new Consulta();
-            }
-
-
-            if (panelMolde.Controls.Contains(consulta))
-                return;
 
             AbrirTela(consulta);
+            consulta.CarregarDados();
+            consulta.ResetarTela();
         }
 
-        private void btnEmprestar_Click(object sender, EventArgs e)
+        private void btnDevolver_Click(object sender, EventArgs e)
         {
+            CorBotao(btnDevolver);
 
-            CorBotao(btnEmprestar);
-
-            if (emprestimo == null)
-            {
-                emprestimo = new Emprestimo();
-            }
-
-
-            if (panelMolde.Controls.Contains(emprestimo))
-                return;
-
-            AbrirTela(emprestimo);
+            Devolver devolver = new Devolver();
+            AbrirTela(devolver);
+            devolver.AtualizarCampos();
         }
     }
 }

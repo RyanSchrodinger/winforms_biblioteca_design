@@ -137,6 +137,7 @@ namespace winforms_biblioteca_design.Controls
                          where linha.Titulo.ToLower().Contains(textoDigitado.ToLower())
                          select linha;
             foreach (var livro in livros) lboLivros.Items.Add(livro);
+
         }
 
         

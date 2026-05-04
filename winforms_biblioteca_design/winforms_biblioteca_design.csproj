@@ -103,6 +103,12 @@
     <Compile Include="Controls\Controles Emprestimos\Consulta.Designer.cs">
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Controles Emprestimos\Devolver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Controles Emprestimos\Devolver.Designer.cs">
+      <DependentUpon>Devolver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Controles Emprestimos\Emprestimo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Controles Emprestimos\Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Controles Emprestimos\Devolver.resx">
+      <DependentUpon>Devolver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Controles Emprestimos\Emprestimo.resx">
       <DependentUpon>Emprestimo.cs</DependentUpon>

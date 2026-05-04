@@ -17,6 +17,19 @@ namespace winforms_biblioteca_design.Controls.Controles_Emprestimos
         public Consulta()
         {
             InitializeComponent();
+            CarregarDados();
+           
+
+        }
+
+        public void ResetarTela()
+        {
+            lboConsulta.ClearSelected();
+            txtPesquisar.Clear();
+        }
+        public void CarregarDados()
+        {
+           
             RequisicoesTableAdapter requisicoes = new RequisicoesTableAdapter();
             lboConsulta.Items.AddRange(requisicoes.GetData().ToArray());
 
@@ -65,9 +78,6 @@ namespace winforms_biblioteca_design.Controls.Controles_Emprestimos
                                         where requisicoes.ToString().ToLower().Contains(txtPesquisar.Text)
                                         select linha).ToArray());
         
-
-
-
 
         }
     }

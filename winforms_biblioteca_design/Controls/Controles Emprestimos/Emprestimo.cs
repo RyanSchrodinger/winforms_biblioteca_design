@@ -26,6 +26,14 @@ namespace winforms_biblioteca_design.Controls
 
         #region METODOS
 
+        public void ResetarTela()
+        {
+            lboLivros.ClearSelected();
+            lboUsuarios.ClearSelected();
+            txtPesquisarLivro.Clear();
+            txtPesquisarUsuario.Clear();
+        }
+
         public void CarregarComboBoxFuncionarios()
         {
             // Será removido no futuro 
@@ -99,6 +107,44 @@ namespace winforms_biblioteca_design.Controls
 
         }
 
+        #region Eventos dos TextBox de pesquisa
+        private void txtPesquisarLivro_TextChanged(object sender, EventArgs e)
+        {
+            TextBox pesquisa = sender as TextBox;
+            if (pesquisa.Text == "")
+            {
+                CarregarListBoxLivros();
+                return;
+            }
+            lboLivros.ClearSelected();
+            lboLivros.Items.Clear();
+            string textoDigitado = txtPesquisarLivro.Text;
+            LivrosTableAdapter dados = new LivrosTableAdapter();
+            var livros = from linha in dados.GetData()
+                         where linha.Titulo.ToLower().Contains(textoDigitado.ToLower())
+                         select linha;
+            foreach (var livro in livros) lboLivros.Items.Add(livro);
+        }
         
+
+        private void txtPesquisarUsuario_TextChanged(object sender, EventArgs e)
+        {
+            TextBox pesquisa = sender as TextBox;
+            if (pesquisa.Text == "")
+            {
+                CarregarListBoxUsuarios();
+                return;
+            }
+            lboUsuarios.ClearSelected();
+            lboUsuarios.Items.Clear();
+            string textoDigitado = txtPesquisarUsuario.Text;
+            UsuariosTableAdapter dados = new UsuariosTableAdapter();
+            var usuarios = from linha in dados.GetData()
+                           where linha.Nome.ToLower().Contains(textoDigitado.ToLower())
+                           select linha;
+            foreach (var usuario in usuarios) lboUsuarios.Items.Add(usuario);
+        }
+        #endregion
+
     }
 }
