@@ -9,12 +9,6 @@ namespace winforms_biblioteca_design
 
     partial class BibliotecaDBDataSet
     {
-
-
-
-
-
-
         partial class FuncionariosRow
         {
             public override string ToString()
@@ -47,7 +41,7 @@ namespace winforms_biblioteca_design
                 LivrosRow livro = (from linha in livros.GetData()
                                    where linha.LivroID == this.LivroID
                                    select linha).FirstOrDefault();
-                return livro.Titulo;
+                return livro.Titulo + " - "  + Status;
             }
         }
 

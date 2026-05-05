@@ -91,7 +91,7 @@ namespace winforms_biblioteca_design.Controls
 
             Devolver devolver = new Devolver();
             AbrirTela(devolver);
-            devolver.AtualizarCampos();
+            
         }
     }
 }
